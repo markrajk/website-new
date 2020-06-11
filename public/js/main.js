@@ -44,14 +44,6 @@ function anchorLinkHandler(e) {
   }, 100);
 }
 
-function ready(fn) {
-  if (document.readyState !== 'loading') {
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
-
 var linksToAnchors = document.querySelectorAll('a[href^="#"]');
 
 linksToAnchors.forEach((each) => (each.onclick = anchorLinkHandler));
@@ -60,7 +52,20 @@ linksToAnchors.forEach((each) => (each.onclick = anchorLinkHandler));
 var header = document.querySelector('.header');
 var tableOfContent = document.querySelector('.table-of-content-wrapper');
 var tableOfContentPos = document.querySelector('.activate-toc');
-var tableOfContentPos2 = document.querySelector('.table-of-content');
+
+var giveFeedbackCard = document.getElementById('give-feedback');
+var receiveFeedbackCard = document.getElementById('receive-feedback');
+
+var tocLinks = document.querySelectorAll('.table-of-content-link');
+
+// for (var i = 0; i < tocLinks.length; i++) {
+//   tocLinks[i].addEventListener('click', function (e) {
+//     for (var j = 0; j < tocLinks.length; j++) {
+//       tocLinks[j].classList.remove('active');
+//     }
+//     e.target.classList.add('active');
+//   });
+// }
 
 window.addEventListener('scroll', function () {
   if (window.scrollY > header.offsetHeight) {
@@ -70,10 +75,30 @@ window.addEventListener('scroll', function () {
   }
 
   if (window.scrollY >= tableOfContentPos.offsetTop - 60) {
-    // header.classList.add('hide');
-    // tableOfContent.classList.add('table-of-content-scroll');
     header.style.top = '-8.4rem';
     header.style.transitionDuration = `${2 / Math.abs(checkScrollSpeed())}s`;
+    if (
+      window.scrollY >=
+      giveFeedbackCard.offsetTop - header.offsetHeight - 30
+    ) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+        document
+          .querySelector('[href="#give-feedback"]')
+          .classList.add('active');
+      }
+    }
+    if (
+      window.scrollY >=
+      receiveFeedbackCard.offsetTop - header.offsetHeight - 30
+    ) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+        document
+          .querySelector('[href="#receive-feedback"]')
+          .classList.add('active');
+      }
+    }
   } else {
     header.style.top = '0';
     header.classList.remove('hide');

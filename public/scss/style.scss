@@ -612,10 +612,12 @@ body {
 // TABLE OF CONTENT
 //=====================================
 .table-of-content-wrapper {
+  padding-top: 2rem;
   position: sticky;
-  top: 2rem;
+  top: 0;
   z-index: 3000;
   transition: all .25s ease-in-out;
+  background: linear-gradient(0deg, transparent, #FFF 80%);
 }
 .table-of-content {
   // top: 0;
