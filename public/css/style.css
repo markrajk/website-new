@@ -421,7 +421,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(163, 163, 163, 0.16); }
 
 .table-of-content-scroll {
-  top: 0;
+  top: 3rem;
   left: 50%;
   position: fixed;
   transform: translate(-50%, 0); }
