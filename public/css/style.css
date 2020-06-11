@@ -19,13 +19,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none; }
-  body::-webkit-scrollbar {
-    width: 0 !important; }
+  font-family: 'Inter', sans-serif; }
 
 .container {
   margin: 0 auto;
@@ -68,12 +62,13 @@ body {
   border-bottom: 2px solid #F3F3F3; }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #FFF;
-  z-index: 2000; }
+  z-index: 2000;
+  transition: all .25s ease-in-out; }
   .header .nav {
     padding-bottom: .3rem;
     height: 8.4rem;
@@ -338,10 +333,13 @@ body {
     min-width: 0;
     max-width: 100rem; }
 
+.table-of-content-wrapper {
+  position: sticky;
+  top: 2rem;
+  z-index: 3000;
+  transition: all .25s ease-in-out; }
+
 .table-of-content {
-  top: 0;
-  left: 0;
-  position: relative;
   transform: translate(0, 0);
   padding: 1rem;
   margin: 0 auto;
@@ -419,12 +417,6 @@ body {
 
 .header-scroll {
   box-shadow: 0 4px 8px 0 rgba(163, 163, 163, 0.16); }
-
-.table-of-content-scroll {
-  top: 3rem;
-  left: 50%;
-  position: fixed;
-  transform: translate(-50%, 0); }
 
 .menu-open {
   transform: translate(0, 0) !important; }

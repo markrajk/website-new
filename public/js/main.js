@@ -44,14 +44,23 @@ function anchorLinkHandler(e) {
   }, 100);
 }
 
+function ready(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
 var linksToAnchors = document.querySelectorAll('a[href^="#"]');
 
 linksToAnchors.forEach((each) => (each.onclick = anchorLinkHandler));
 
 //HEADER SHADOW
 var header = document.querySelector('.header');
-var tableOfContent = document.querySelector('.table-of-content');
+var tableOfContent = document.querySelector('.table-of-content-wrapper');
 var tableOfContentPos = document.querySelector('.activate-toc');
+var tableOfContentPos2 = document.querySelector('.table-of-content');
 
 window.addEventListener('scroll', function () {
   if (window.scrollY > header.offsetHeight) {
@@ -60,11 +69,43 @@ window.addEventListener('scroll', function () {
     header.classList.remove('header-scroll');
   }
 
-  if (window.scrollY >= tableOfContentPos.offsetTop) {
-    header.classList.add('hide');
-    tableOfContent.classList.add('table-of-content-scroll');
+  if (window.scrollY >= tableOfContentPos.offsetTop - 60) {
+    // header.classList.add('hide');
+    // tableOfContent.classList.add('table-of-content-scroll');
+    header.style.top = '-8.4rem';
+    header.style.transitionDuration = `${2 / Math.abs(checkScrollSpeed())}s`;
   } else {
+    header.style.top = '0';
     header.classList.remove('hide');
     tableOfContent.classList.remove('table-of-content-scroll');
   }
 });
+
+var checkScrollSpeed = (function (settings) {
+  settings = settings || {};
+
+  var lastPos,
+    newPos,
+    timer,
+    delta,
+    delay = settings.delay || 50; // in "ms" (higher means lower fidelity )
+
+  function clear() {
+    lastPos = null;
+    delta = 0;
+  }
+
+  clear();
+
+  return function () {
+    newPos = window.scrollY;
+    if (lastPos != null) {
+      // && newPos < maxScroll
+      delta = newPos - lastPos;
+    }
+    lastPos = newPos;
+    clearTimeout(timer);
+    timer = setTimeout(clear, delay);
+    return delta;
+  };
+})();
