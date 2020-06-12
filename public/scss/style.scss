@@ -98,6 +98,7 @@ $text-color-primary: #1c1c1c;
 }
 
 html {
+  
   font-size: 62.5%;   //1rem = 10px 10px/16 62.5%
 
   @include respond(desktop-xl) {
@@ -117,14 +118,14 @@ body {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     
-  //   overflow-x: hidden;
-  //   overflow-y: auto;
-  //   scrollbar-width: none;
-  //   -ms-overflow-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
-  //   &::-webkit-scrollbar { 
-  //     width: 0 !important;
-  // }
+    &::-webkit-scrollbar { 
+      width: 0 !important;
+  }
 }
 
 // ====================================================================================================================================
@@ -194,7 +195,7 @@ body {
 // HEADER
 // ==================================
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -421,15 +422,15 @@ body {
 // ====================================================================================================================================
 //                                                              PAGE STYLES
 // ====================================================================================================================================
-// .main {
-//   padding-top: 8.4rem;
-// }
+.main {
+  padding-top: 8.4rem;
+}
 
 //=====================================
 // HERO SECTION
 //=====================================
 .section-hero {
-  padding-top: 4rem;
+  padding-top: 9rem;
   padding-bottom: 7.4rem;
   display: flex;
   align-items: flex-start;
@@ -568,6 +569,12 @@ body {
       font-weight: 400;
       line-height: 1.87;
       color: #414448;
+
+      //TABLET
+      @include respond(desktop-md) {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
     }
   }
 
@@ -586,12 +593,24 @@ body {
   padding-bottom: 6.4rem;
   text-align: center;
 
+  //TABLET
+  @include respond(desktop-md) {
+    padding-top: 5.7rem;
+  }
+
   &-title {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.7rem;
     font-size: 3.6rem;
     font-weight: 700;
     line-height: 1.64;
     color: #1c1c1c;
+
+    //TABLET
+    @include respond(desktop-md) {
+      margin-bottom: 1.6rem;
+      font-size: 3.1rem;
+      line-height: 1.42;
+    }
   }
 
   &-text {
@@ -640,6 +659,7 @@ body {
 
   &-link {
     width: 100%;
+    max-width: 23rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -649,6 +669,43 @@ body {
     line-height: 3.63;
     color: #2e3134;
     text-decoration: none;
+    white-space: nowrap;
+
+    @include respond(desktop-lg) {
+      font-size: 1.55rem;
+      max-width: 20.3rem;
+    }
+
+    @include respond(desktop-md) {
+      font-size: 1.5rem;
+      max-width: 17rem;
+    }
+
+    @include custom-respond(900) {
+      height: 4rem;
+      font-size: 1.4rem;
+      max-width: 15.2rem;
+    }
+
+    @include respond(desktop-sm) {
+      font-size: 1.3rem;
+    }
+
+    @include custom-respond(450) {
+      & span {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(4) {
+      @include custom-respond(630) {
+        display: none;
+      }
+    }
+
+    &:not(:last-of-type) {
+      padding: 0 .6rem;
+    }
     
     &.active {
       color: #4ac623;
@@ -660,10 +717,29 @@ body {
 
   & .btn {
     height: 4.8rem;
-    padding: 1.35rem 3.85rem;
+    padding: 1.35rem 3rem;
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.16px;
+
+    @include respond(desktop-lg) {
+      font-size: 1.55rem;
+    }
+
+    @include respond(desktop-md) {
+      font-size: 1.5rem;
+      padding: 1.35rem 1.85rem;
+    }
+
+    @include custom-respond(900) {
+      height: 4rem;
+      font-size: 1.4rem;
+      padding: 1.35rem 1.5rem;
+    }
+
+    @include respond(desktop-sm) {
+      display: none;
+    }
   }
 }
 
