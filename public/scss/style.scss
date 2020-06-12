@@ -164,11 +164,13 @@ body {
     color: #FFF;
     background-color: $green-primary;
     border: solid 1.5px $green-primary;
+    font-weight: 600;
 
     &-outlined {
       color: $green-primary;
       border: solid 1.5px $green-primary;
       background-color: transparent;
+      font-weight: 600;
     }
   }
 
@@ -419,15 +421,15 @@ body {
 // ====================================================================================================================================
 //                                                              PAGE STYLES
 // ====================================================================================================================================
-.main {
-  padding-top: 8.4rem;
-}
+// .main {
+//   padding-top: 8.4rem;
+// }
 
 //=====================================
 // HERO SECTION
 //=====================================
 .section-hero {
-  padding-top: 9rem;
+  padding-top: 4rem;
   padding-bottom: 7.4rem;
   display: flex;
   align-items: flex-start;

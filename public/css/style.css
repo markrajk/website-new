@@ -47,11 +47,13 @@ body {
   .btn-primary {
     color: #FFF;
     background-color: #4ac623;
-    border: solid 1.5px #4ac623; }
+    border: solid 1.5px #4ac623;
+    font-weight: 600; }
     .btn-primary-outlined {
       color: #4ac623;
       border: solid 1.5px #4ac623;
-      background-color: transparent; }
+      background-color: transparent;
+      font-weight: 600; }
   .btn-outlined {
     font-weight: 700;
     color: #26292c;
@@ -203,11 +205,8 @@ body {
               .header .nav-menu-footer .btn:not(:first-of-type) {
                 margin-top: 1rem; } }
 
-.main {
-  padding-top: 8.4rem; }
-
 .section-hero {
-  padding-top: 9rem;
+  padding-top: 4rem;
   padding-bottom: 7.4rem;
   display: flex;
   align-items: flex-start;
