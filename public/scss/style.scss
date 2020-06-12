@@ -161,6 +161,18 @@ body {
     }
   }
 
+  &-info {
+    padding: .9rem 1.7rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.87;
+    letter-spacing: 0.29px;
+    color: #2376e5;
+    border-radius: 4px;
+    border: solid 1px #dadce0;
+    background-color: #ffffff;
+  }
+
   &-primary {
     color: #FFF;
     background-color: $green-primary;
@@ -440,13 +452,15 @@ body {
   //TABLET
   @include respond(desktop-md) {
     padding-top: 7rem;
-    padding-bottom: 6.2rem;
+    padding-bottom: 5.2rem;
     justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
   //MOBILE
   @include respond(desktop-xsm) {
+    flex-direction: column;
     padding-top: 5.5rem;
     padding-bottom: 3.5rem;
   }
@@ -455,9 +469,16 @@ body {
     //min-width: 50rem;
     margin-right: 2rem;
 
+    //TABLET
     @include respond(desktop-md) {
       margin-right: 0;
       min-width: 0;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      width: 100%;
+      max-width: 100%;
     }
 
     &-subtitle {
@@ -490,9 +511,14 @@ body {
 
       //MOBILE
       @include respond(desktop-xsm) {
-        margin-bottom: 2.3rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        max-width: 30rem;
+        max-width: 100%;
         font-size: 2.9rem;
-        line-height: 1.31;
+        line-height: 1.21;
+        letter-spacing: normal;
         color: #1c1c1c;
       }
     }
@@ -517,12 +543,14 @@ body {
 
       //MOBILE
       @include respond(desktop-xsm) {
-        margin-bottom: 2.7rem;
-        //width: 304px;
+        margin-bottom: 1.6rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 32.6rem;
+        max-width: 90%;
         font-size: 1.5rem;
         line-height: 1.47;
         letter-spacing: 0.15px;
-        color: #5a5a5a;
       }
     }
 
@@ -536,7 +564,7 @@ body {
 
       //MOBILE
       @include respond(desktop-xsm) {
-        margin-bottom: 2.3rem;
+        margin-bottom: 1.3rem;
       }
 
       & .btn {
@@ -574,6 +602,7 @@ body {
       @include respond(desktop-md) {
         font-size: 1.3rem;
         font-weight: 600;
+        line-height: 2.15;
       }
     }
   }
@@ -582,6 +611,23 @@ body {
     width: 100%;
     min-width: 0;
     max-width: 58.1rem;
+
+    //TABLET
+    @include respond(desktop-md) {
+      display: none;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      margin-bottom: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 28.9rem;
+      max-width: 78%;
+
+      order: -1;
+      display: block;
+    }
   }
 }
 
@@ -595,7 +641,13 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
-    padding-top: 5.7rem;
+    padding-top: 5.5rem;
+    padding-bottom: 1.8rem;
+  }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    display: none;
   }
 
   &-title {
@@ -607,7 +659,7 @@ body {
 
     //TABLET
     @include respond(desktop-md) {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1rem;
       font-size: 3.1rem;
       line-height: 1.42;
     }
@@ -619,12 +671,28 @@ body {
     font-weight: 400;
     line-height: 1.44;
     color: #1c1c1c;
+
+    //TABLET
+    @include respond(desktop-md) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 2.83rem;
+      max-width: 44.4rem;
+      font-size: 1.6rem;
+      line-height: 1.63;
+      color: #000000;
+    }
   }
 
   &-img {
     width: 100%;
     min-width: 0;
     max-width: 100rem;
+
+    //TABLET
+    @include respond(desktop-md) {
+      max-width: 68rem;
+    }
   }
 }
 
@@ -755,15 +823,50 @@ body {
     align-items: center;
     justify-content: center;
 
+    //TABLET
+    @include respond(desktop-md) {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     &-img {
       width: 100%;
       min-width: 0;
       max-width: 30.84rem;
+
+      //TABLET
+      @include respond(desktop-md) {
+        max-width: 25rem;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        margin-bottom: 4rem;
+        max-width: 52.3%;
+      }
     }
 
     &-main {
       margin-left: 9.2rem;
       max-width: 40rem;
+
+      //TABLET
+      @include respond(desktop-md) {
+        margin-left: 4rem;
+        max-width: 30rem;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        margin-left: 0;
+        max-width: 100%;
+      }
       
       &-title {
         margin-bottom: 3.5rem;
@@ -771,6 +874,21 @@ body {
         font-weight: 700;
         line-height: 1.61;
         color: #1c1c1c;
+
+        //TABLET
+        @include respond(desktop-md) {
+          margin-bottom: 2.7rem;
+          font-size: 2.6rem;
+          line-height: 1.46;
+        }
+
+        //MOBILE
+        @include respond(desktop-xsm) {
+          margin-bottom: 1.8rem;
+          font-size: 1.9rem;
+          line-height: 1.58;
+          color: #000000;
+        }
       }
 
       &-text {
@@ -779,6 +897,23 @@ body {
         font-weight: 400;
         line-height: 1.56;
         color: #1c1c1c;
+
+        //TABLET
+        @include respond(desktop-md) {
+          margin-bottom: 2.8rem;
+          font-size: 1.2rem;
+          line-height: 1.58;
+        }
+
+        //MOBILE
+        @include respond(desktop-xsm) {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 1.8rem;
+          max-width: 81.1%;
+          font-size: 1.4rem;
+          line-height: 1.57;
+        }
       }
 
       &-buttons {
@@ -789,8 +924,15 @@ body {
           font-weight: 600;
           line-height: 1.75;
 
+          //TABLET
+          @include respond(desktop-md) {
+            padding: .75rem 1.2rem;
+            font-size: 1.2rem;
+            line-height: 1.58;
+          }
+
           &:first-of-type {
-            margin-right: 1.6rem;
+            margin-right: 1.1rem;
           }
         }
       }
@@ -813,6 +955,17 @@ body {
 //=========================================================================================================================================
 //                                                           ADDITIONAL CLASSES
 //=========================================================================================================================================
+
+.activate-toc {
+  margin-bottom: 1.8rem;
+
+  @include respond(desktop-md) {
+    margin-bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 .header-scroll {
   box-shadow: 0 4px 8px 0 rgba($color: #A3A3A3, $alpha: .16);
 }
