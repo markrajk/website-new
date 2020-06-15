@@ -176,7 +176,7 @@ body {
       transform: translate(100%, 0);
       transition: all .5s ease-in-out;
       background-color: #FFF;
-      z-index: 3000; }
+      z-index: 5000; }
       @media (max-width: 991px) {
         .header .nav-menu {
           display: block; } }
@@ -234,6 +234,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 991px) {
+    .footer-main {
+      padding-top: 5.7rem;
+      padding-bottom: 5.2rem; } }
   .footer-main-list {
     width: 100%;
     max-width: 20rem;
@@ -241,8 +245,14 @@ body {
     list-style: none; }
     .footer-main-list:not(:last-of-type) {
       margin-right: 5.5rem; }
+      @media (max-width: 991px) {
+        .footer-main-list:not(:last-of-type) {
+          margin-right: 0; } }
     .footer-main-list-item {
       margin-bottom: 1.5rem; }
+      @media (max-width: 991px) {
+        .footer-main-list-item {
+          margin-bottom: 1.9rem; } }
       .footer-main-list-item-title {
         margin-bottom: .4rem;
         font-size: 1.6rem;
@@ -250,6 +260,10 @@ body {
         line-height: 1.63;
         letter-spacing: 0.16px;
         color: #313131; }
+        @media (max-width: 991px) {
+          .footer-main-list-item-title {
+            margin-bottom: 0;
+            font-size: 1.3rem; } }
       .footer-main-list-item-link {
         font-size: 1.5rem;
         font-weight: 400;
@@ -259,13 +273,22 @@ body {
         text-decoration: none; }
         .footer-main-list-item-link:hover, .footer-main-list-item-link:focus {
           text-decoration: underline; }
+        @media (max-width: 991px) {
+          .footer-main-list-item-link {
+            font-size: 1.25rem; } }
 .footer-mid {
   padding: 2.5rem 0;
   background-color: #f5f5f5; }
+  @media (max-width: 991px) {
+    .footer-mid {
+      padding: 2.1rem 0; } }
   .footer-mid .container {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 991px) {
+      .footer-mid .container {
+        justify-content: center; } }
   .footer-mid-links-link {
     font-size: 1.5rem;
     font-weight: 700;
@@ -273,6 +296,10 @@ body {
     letter-spacing: 0.15px;
     color: #454545;
     text-decoration: none; }
+    @media (max-width: 991px) {
+      .footer-mid-links-link {
+        font-size: 1.2rem;
+        letter-spacing: 0.12px; } }
     .footer-mid-links-link:hover, .footer-mid-links-link:focus {
       text-decoration: underline; }
     .footer-mid-links-link:not(:last-of-type) {
@@ -288,6 +315,9 @@ body {
       text-decoration: underline; }
     .footer-mid-lng span {
       font-weight: 700; }
+    @media (max-width: 991px) {
+      .footer-mid-lng {
+        display: none; } }
 .footer-copy {
   padding-top: 1.7rem;
   padding-bottom: 1.7rem;
@@ -298,6 +328,10 @@ body {
     line-height: 1.76;
     letter-spacing: 0.13px;
     color: #454545; }
+    @media (max-width: 991px) {
+      .footer-copy-text {
+        font-size: 1.05rem;
+        text-align: center; } }
 
 .main {
   padding-top: 8.4rem; }
@@ -489,7 +523,6 @@ body {
   padding-top: 2rem;
   position: sticky;
   top: 0;
-  z-index: 3000;
   transition: all .25s ease-in-out;
   background: linear-gradient(0deg, transparent, #FFF 80%); }
 
@@ -578,8 +611,8 @@ body {
   justify-content: center; }
   @media (max-width: 991px) {
     .section-info-card {
-      padding-top: 7rem;
-      padding-bottom: 7rem; } }
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem; } }
   @media (max-width: 575px) {
     .section-info-card {
       flex-direction: column;
@@ -614,9 +647,9 @@ body {
       color: #1c1c1c; }
       @media (max-width: 991px) {
         .section-info-card-main-title {
-          margin-bottom: 2.7rem;
+          margin-bottom: 2.8rem;
           font-size: 2.6rem;
-          line-height: 1.46; } }
+          line-height: 1.31; } }
       @media (max-width: 575px) {
         .section-info-card-main-title {
           margin-bottom: 1.8rem;
@@ -631,9 +664,9 @@ body {
       color: #1c1c1c; }
       @media (max-width: 991px) {
         .section-info-card-main-text {
-          margin-bottom: 2.8rem;
-          font-size: 1.2rem;
-          line-height: 1.58; } }
+          margin-bottom: 3.6rem;
+          font-size: 1.5rem;
+          line-height: 1.53; } }
       @media (max-width: 575px) {
         .section-info-card-main-text {
           margin-left: auto;
@@ -652,29 +685,49 @@ body {
         @media (max-width: 991px) {
           .section-info-card-main-buttons .btn {
             padding: .75rem 1.2rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.58; } }
         .section-info-card-main-buttons .btn:first-of-type {
           margin-right: 1.1rem; }
   .section-info-card.reversed {
     margin-right: 6.4rem;
     flex-direction: row-reverse; }
+    @media (max-width: 991px) {
+      .section-info-card.reversed {
+        flex-direction: column;
+        margin-right: 0; } }
     .section-info-card.reversed .section-info-card-main {
       margin-left: 0;
       margin-right: 8rem; }
       @media (max-width: 991px) {
         .section-info-card.reversed .section-info-card-main {
-          margin-right: 4rem; } }
+          margin-right: 0; } }
+  .section-info-card.card-01 {
+    padding-top: 8rem; }
 
 .section-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 5.8rem;
   padding-bottom: 8.8rem;
   text-align: center; }
+  @media (max-width: 991px) {
+    .section-dashboard {
+      padding-top: 4rem;
+      padding-bottom: 7rem; } }
   .section-dashboard-img {
     margin-bottom: 6.4rem;
     width: 100%;
     min-width: 0;
     max-width: 90rem; }
+    @media (max-width: 991px) {
+      .section-dashboard-img {
+        margin-bottom: 0;
+        margin-top: 2.8rem;
+        order: 2;
+        max-width: 64.4rem; } }
   .section-dashboard-main-title {
     margin-bottom: 3.3rem;
     margin-left: auto;
@@ -684,6 +737,12 @@ body {
     font-weight: 700;
     line-height: 1.45;
     color: #1c1c1c; }
+    @media (max-width: 991px) {
+      .section-dashboard-main-title {
+        margin-bottom: 1.4rem;
+        font-size: 2.9rem;
+        line-height: 1.31;
+        max-width: 37rem; } }
   .section-dashboard-main-text {
     margin-bottom: 4.1rem;
     margin-left: auto;
@@ -693,15 +752,32 @@ body {
     font-weight: 400;
     line-height: 1.67;
     color: #1c1c1c; }
+    @media (max-width: 991px) {
+      .section-dashboard-main-text {
+        max-width: 52rem;
+        margin-bottom: 2.6rem;
+        font-size: 1.4rem;
+        line-height: 1.71; } }
   .section-dashboard-main-buttons .btn {
     padding: 1.4rem 2.1rem;
     font-size: 1.6rem; }
+    @media (max-width: 991px) {
+      .section-dashboard-main-buttons .btn {
+        padding: 1rem 1.6rem;
+        font-size: 1.3rem; } }
     .section-dashboard-main-buttons .btn-primary {
       margin-right: 2.5rem; }
+      @media (max-width: 991px) {
+        .section-dashboard-main-buttons .btn-primary {
+          margin-right: 1.4rem; } }
 
 .section-banner {
   padding-top: 12.5rem;
   padding-bottom: 12.5rem; }
+  @media (max-width: 991px) {
+    .section-banner {
+      padding-top: 6.6rem;
+      padding-bottom: 6.9rem; } }
   .section-banner.green {
     background-color: #4ac623;
     color: #FFF; }
@@ -714,14 +790,23 @@ body {
       font-weight: 600;
       line-height: 1.5;
       color: #ffffff; }
+      @media (max-width: 991px) {
+        .section-banner-main-content-link {
+          font-size: 2.2rem; } }
       .section-banner-main-content-link a {
         color: #FFF;
         font-weight: 700;
         text-decoration: underline; }
     .section-banner-main-content.left {
       max-width: 41.4rem; }
+      @media (max-width: 991px) {
+        .section-banner-main-content.left {
+          max-width: 25.3rem; } }
     .section-banner-main-content.right {
       max-width: 32.6rem; }
+      @media (max-width: 991px) {
+        .section-banner-main-content.right {
+          max-width: 18.1rem; } }
 
 .activate-toc {
   margin-bottom: 1.8rem; }

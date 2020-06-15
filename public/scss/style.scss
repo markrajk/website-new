@@ -356,7 +356,7 @@ body {
       transform: translate(100%, 0);
       transition: all .5s ease-in-out;
       background-color: #FFF;
-      z-index: 3000;
+      z-index: 5000;
 
       @include respond(desktop-md) {
         display: block;
@@ -455,6 +455,12 @@ body {
     align-items: center;
     justify-content: center;
 
+    //TABLET
+    @include respond(desktop-md) {
+      padding-top: 5.7rem;
+      padding-bottom: 5.2rem;
+    }
+
     &-list {
       width: 100%;
       max-width: 20rem;
@@ -463,10 +469,21 @@ body {
 
       &:not(:last-of-type) {
         margin-right: 5.5rem;
+
+        //TABLET
+        @include respond(desktop-md) {
+          margin-right: 0;
+        }
       }
 
       &-item {
         margin-bottom: 1.5rem;
+
+        //TABLET
+        @include respond(desktop-md) {
+          margin-bottom: 1.9rem;
+        }
+
         &-title {
           margin-bottom: .4rem;
           font-size: 1.6rem;
@@ -474,6 +491,12 @@ body {
           line-height: 1.63;
           letter-spacing: 0.16px;
           color: #313131;
+
+          //TABLET
+          @include respond(desktop-md) {
+            margin-bottom: 0;
+            font-size: 1.3rem;
+          }
         }
 
         &-link {
@@ -488,6 +511,11 @@ body {
           &:focus {
             text-decoration: underline;
           }
+
+          //TABLET
+          @include respond(desktop-md) {
+            font-size: 1.25rem;
+          }
         }
       }
     }
@@ -497,10 +525,20 @@ body {
     padding: 2.5rem 0;
     background-color: #f5f5f5;
 
+    //TABLET
+    @include respond(desktop-md) {
+      padding: 2.1rem 0;
+    }
+
     & .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      //TABLET
+      @include respond(desktop-md) {
+        justify-content: center;
+      }
     }
 
     &-links {
@@ -512,6 +550,12 @@ body {
         letter-spacing: 0.15px;
         color: #454545;
         text-decoration: none;
+
+        //TABLET
+        @include respond(desktop-md) {
+          font-size: 1.2rem;
+          letter-spacing: 0.12px;
+        }
 
         &:hover,
         &:focus {
@@ -540,6 +584,11 @@ body {
       & span {
         font-weight: 700;
       }
+
+      //TABLET
+      @include respond(desktop-md) {
+        display: none;
+      }
     }
   }
 
@@ -554,6 +603,12 @@ body {
       line-height: 1.76;
       letter-spacing: 0.13px;
       color: #454545;
+
+      //TABLET
+      @include respond(desktop-md) {
+        font-size: 1.05rem;
+        text-align: center;
+      }
     }
   }
 }
@@ -832,7 +887,7 @@ body {
   padding-top: 2rem;
   position: sticky;
   top: 0;
-  z-index: 3000;
+  // z-index: 3000;
   transition: all .25s ease-in-out;
   background: linear-gradient(0deg, transparent, #FFF 80%);
 }
@@ -953,8 +1008,8 @@ body {
 
     //TABLET
     @include respond(desktop-md) {
-      padding-top: 7rem;
-      padding-bottom: 7rem;
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
     }
 
     //MOBILE
@@ -1005,9 +1060,9 @@ body {
 
         //TABLET
         @include respond(desktop-md) {
-          margin-bottom: 2.7rem;
+          margin-bottom: 2.8rem;
           font-size: 2.6rem;
-          line-height: 1.46;
+          line-height: 1.31;
         }
 
         //MOBILE
@@ -1028,9 +1083,9 @@ body {
 
         //TABLET
         @include respond(desktop-md) {
-          margin-bottom: 2.8rem;
-          font-size: 1.2rem;
-          line-height: 1.58;
+          margin-bottom: 3.6rem;
+          font-size: 1.5rem;
+          line-height: 1.53;
         }
 
         //MOBILE
@@ -1056,7 +1111,7 @@ body {
           //TABLET
           @include respond(desktop-md) {
             padding: .75rem 1.2rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.58;
           }
 
@@ -1071,29 +1126,27 @@ body {
       margin-right: 6.4rem;
       flex-direction: row-reverse;
 
+      //TABLET
+      @include respond(desktop-md) {
+        flex-direction: column;
+        margin-right: 0;
+      }
+
       .section-info-card-main {
         margin-left: 0;
         margin-right: 8rem;
 
 
-      //TABLET
-      @include respond(desktop-md) {
-        margin-right: 4rem;
-      }
+        //TABLET
+        @include respond(desktop-md) {
+          margin-right: 0;
+        }
       }
     }
 
-    // &.card-02 {
-    //   padding-top: 7rem;
-
-    //   & .section-info-card-main-buttons {
-    //     white-space: normal;
-
-    //     & > *:not(:last-child) {
-    //       margin-bottom: 1.5rem;
-    //     }
-    //   }
-    // }
+    &.card-01 {
+      padding-top: 8rem;
+    }
   }
 }
 
@@ -1101,15 +1154,33 @@ body {
 // SECTION DASBOARD
 //=====================================
 .section-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 5.8rem;
   padding-bottom: 8.8rem;
   text-align: center;
+
+  //TABLET
+  @include respond(desktop-md) {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+  }
 
   &-img {
     margin-bottom: 6.4rem;
     width: 100%;
     min-width: 0;
     max-width: 90rem;
+
+    //TABLET
+    @include respond(desktop-md) {
+      margin-bottom: 0;
+      margin-top: 2.8rem;
+      order: 2;
+      max-width: 64.4rem;
+    }
   }
 
   &-main {
@@ -1123,6 +1194,14 @@ body {
       font-weight: 700;
       line-height: 1.45;
       color: #1c1c1c;
+
+      //TABLET
+      @include respond(desktop-md) {
+        margin-bottom: 1.4rem;
+        font-size: 2.9rem;
+        line-height: 1.31;
+        max-width: 37rem;
+      }
     }
 
     &-text {
@@ -1134,6 +1213,14 @@ body {
       font-weight: 400;
       line-height: 1.67;
       color: #1c1c1c;
+
+      //TABLET
+      @include respond(desktop-md) {
+        max-width: 52rem;
+        margin-bottom: 2.6rem;
+        font-size: 1.4rem;
+        line-height: 1.71;
+      }
     }
 
     &-buttons {
@@ -1142,8 +1229,19 @@ body {
         padding: 1.4rem 2.1rem;
         font-size: 1.6rem;
 
+        //TABLET
+        @include respond(desktop-md) {
+          padding: 1rem 1.6rem;
+          font-size: 1.3rem;
+        }
+
         &-primary {
           margin-right: 2.5rem;
+
+          //TABLET
+          @include respond(desktop-md) {
+            margin-right: 1.4rem;
+          }
         }
       }
     }
@@ -1156,6 +1254,12 @@ body {
 .section-banner {
   padding-top: 12.5rem;
   padding-bottom: 12.5rem;
+
+  //TABLET
+  @include respond(desktop-md) {
+    padding-top: 6.6rem;
+    padding-bottom: 6.9rem;
+  }
 
   &.green {
     background-color: $green-primary;
@@ -1174,6 +1278,11 @@ body {
         line-height: 1.5;
         color: #ffffff;
 
+        //TABLET
+        @include respond(desktop-md) {
+          font-size: 2.2rem;
+        }
+
         & a {
           color: #FFF;
           font-weight: 700;
@@ -1183,10 +1292,20 @@ body {
 
       &.left {
         max-width: 41.4rem;
+
+        //TABLET
+        @include respond(desktop-md) {
+          max-width: 25.3rem;
+        }
       }
 
       &.right {
         max-width: 32.6rem;
+
+        //TABLET
+        @include respond(desktop-md) {
+          max-width: 18.1rem;
+        }
       }
     }
   }
