@@ -637,14 +637,17 @@ body {
   align-items: center;
   justify-content: space-between; }
   .main-features .table-of-content-item {
+    padding: 0 .75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     cursor: pointer; }
     .main-features .table-of-content-item:hover .table-of-content-item-icon, .main-features .table-of-content-item:focus .table-of-content-item-icon {
       transform: translate(0, -15px); }
     .main-features .table-of-content-item-icon {
+      margin-bottom: 1rem;
       width: 7rem;
       height: 7rem;
       transform: translate(0, 0);
@@ -652,7 +655,6 @@ body {
     .main-features .table-of-content-item-link {
       font-size: 1.4rem;
       font-weight: 400;
-      line-height: 3.57;
       color: #000000;
       text-decoration: none; }
 
@@ -1028,7 +1030,8 @@ body {
   .section-feature-teams-main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr; }
+    grid-template-rows: 1fr;
+    grid-gap: 0 7rem; }
     .section-feature-teams-main-card {
       text-align: left; }
       .section-feature-teams-main-card-title {
