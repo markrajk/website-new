@@ -128,6 +128,7 @@ window.addEventListener('scroll', function () {
   if (window.scrollY >= tableOfContentPos.offsetTop - 90) {
     header.style.top = '-8.4rem';
     header.style.transitionDuration = `${2 / Math.abs(checkScrollSpeed())}s`;
+    tableOfContent.classList.add('move');
     if (
       window.scrollY >=
       giveFeedbackCard.offsetTop - header.offsetHeight - 30
@@ -184,6 +185,7 @@ window.addEventListener('scroll', function () {
     header.style.top = '0';
     header.classList.remove('hide');
     tableOfContent.classList.remove('table-of-content-scroll');
+    tableOfContent.classList.remove('move');
   }
 });
 

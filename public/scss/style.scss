@@ -1038,13 +1038,28 @@ body {
   left: 0;
   background-color: #FFF;
   border-bottom: 1.5px solid #EFF0F3;
+  transition: all .3s ease-in-out;
+
+  &.move {
+    width: 100%;
+    position: fixed;
+    top: -8rem;
+
+    & .table-of-content-item-icon {
+      opacity: 0;
+    }
+  }
 }
 .main-features .table-of-content {
   padding-top: 3.4rem;
-  padding-bottom: 1.4rem;
+  padding-bottom: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  top: 0;
+  transition: all .3s ease-in-out;
+
+  
 
   &-item {
     padding: 0 .75rem;
@@ -1069,6 +1084,7 @@ body {
       margin-bottom: 1rem;
       width: 7rem;
       height: 7rem;
+      opacity: 1;
       transform: translate(0,0);
       transition: transform .3s ease-in-out;
     }
@@ -1590,7 +1606,7 @@ body {
   &-main {
 
     &-title {
-      margin-bottom: 2.6rem;
+      margin-bottom: 1.8rem;
       font-size: 2.7rem;
       font-weight: 600;
       line-height: 1.85;
