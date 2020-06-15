@@ -176,14 +176,22 @@ body {
   &-primary {
     color: #FFF;
     background-color: $green-primary;
-    border: solid 1.5px $green-primary;
+    border: solid 2px $green-primary;
     font-weight: 600;
 
     &-outlined {
       color: $green-primary;
-      border: solid 1.5px $green-primary;
+      border: solid 2px $green-primary;
       background-color: transparent;
       font-weight: 600;
+    }
+  }
+
+  &-secondary {
+
+    &-outlined {
+      color: #2678e5;
+      border: solid 2px #2678e5;
     }
   }
 
@@ -197,6 +205,16 @@ body {
 .b-b {
   width: 100%;
   border-bottom: 2px solid #F3F3F3;
+}
+
+.card-section-divider {
+  @include respond(desktop-md) {
+    display: none;
+  }
+
+  @include respond(desktop-xsm) {
+    display: block;
+  }
 }
 
 // ====================================================================================================================================
@@ -312,6 +330,7 @@ body {
       }
 
       & .btn-link {
+        font-weight: 600;
         margin-right:  2.2rem;
 
         @include respond(desktop-md) {
@@ -452,7 +471,7 @@ body {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
 
     //TABLET
@@ -461,11 +480,21 @@ body {
       padding-bottom: 5.2rem;
     }
 
+    //MOBILE
+    @include respond(desktop-xsm) {
+      flex-wrap: wrap;
+    }
+
     &-list {
       width: 100%;
       max-width: 20rem;
       text-align: center;
       list-style: none;
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        max-width: 50%;
+      }
 
       &:not(:last-of-type) {
         margin-right: 5.5rem;
@@ -473,6 +502,13 @@ body {
         //TABLET
         @include respond(desktop-md) {
           margin-right: 0;
+        }
+      }
+
+      &:first-of-type {
+        //MOBILE
+        @include respond(desktop-xsm) {
+          margin-bottom: 4.2rem;
         }
       }
 
@@ -1160,7 +1196,7 @@ body {
 }
 
 //=====================================
-// SECTION DASBOARD
+// DASBOARD SECTION
 //=====================================
 .section-dashboard {
   display: flex;
@@ -1177,6 +1213,12 @@ body {
     padding-bottom: 7rem;
   }
 
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 3.5rem;
+    padding-bottom: 4.37rem;
+  }
+
   &-img {
     margin-bottom: 6.4rem;
     width: 100%;
@@ -1189,6 +1231,14 @@ body {
       margin-top: 2.8rem;
       order: 2;
       max-width: 64.4rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      margin-bottom: 4rem;
+      margin-top: 0;
+      order: 0;
+      max-width: 99%;
     }
   }
 
@@ -1211,6 +1261,14 @@ body {
         line-height: 1.31;
         max-width: 37rem;
       }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        margin-bottom: 1.8rem;
+        font-size: 1.9rem;
+        line-height: 1.58;
+        color: #000000;
+      }
     }
 
     &-text {
@@ -1229,6 +1287,12 @@ body {
         margin-bottom: 2.6rem;
         font-size: 1.4rem;
         line-height: 1.71;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        max-width: 81.1%;
+        line-height: 1.58;
       }
     }
 
@@ -1258,7 +1322,7 @@ body {
 }
 
 //=====================================
-// BANNER DASBOARD
+// BANNER SECTION
 //=====================================
 .section-banner {
   padding-top: 12.5rem;
@@ -1268,6 +1332,11 @@ body {
   @include respond(desktop-md) {
     padding-top: 6.6rem;
     padding-bottom: 6.9rem;
+  }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    display: none;
   }
 
   &.green {
@@ -1316,6 +1385,55 @@ body {
           max-width: 18.1rem;
         }
       }
+    }
+  }
+}
+
+//=====================================
+// BANNER MOBILE SECTION
+//=====================================
+.section-banner-mobile {
+  display: none;
+  padding-top: 5.5rem;
+  padding-bottom: 5rem;
+  border-top: 1.5px solid #F2F0F2;
+  border-bottom: 1.5px solid #F2F0F2;
+  text-align: center;
+
+  @include respond(desktop-xsm) {
+    display: block;
+  }
+
+  &-main {
+
+    &-img {
+      margin-bottom: 1.4rem;
+      max-width: 4.8rem;
+    }
+
+    &-title {
+      margin-bottom: 1.7rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.36;
+      color: #1c1c1c;
+    }
+
+    &-text {
+      margin-bottom: 3.1rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 30.8rem;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.57;
+      color: #2f2f2f;
+    }
+
+    & .btn {
+      padding: .9rem 1.9rem;
+      font-weight: 500;
+      font-size: 1.6rem;
     }
   }
 }

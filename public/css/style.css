@@ -63,13 +63,16 @@ body {
   .btn-primary {
     color: #FFF;
     background-color: #4ac623;
-    border: solid 1.5px #4ac623;
+    border: solid 2px #4ac623;
     font-weight: 600; }
     .btn-primary-outlined {
       color: #4ac623;
-      border: solid 1.5px #4ac623;
+      border: solid 2px #4ac623;
       background-color: transparent;
       font-weight: 600; }
+  .btn-secondary-outlined {
+    color: #2678e5;
+    border: solid 2px #2678e5; }
   .btn-outlined {
     font-weight: 700;
     color: #26292c;
@@ -78,6 +81,13 @@ body {
 .b-b {
   width: 100%;
   border-bottom: 2px solid #F3F3F3; }
+
+@media (max-width: 991px) {
+  .card-section-divider {
+    display: none; } }
+@media (max-width: 575px) {
+  .card-section-divider {
+    display: block; } }
 
 .header {
   position: fixed;
@@ -146,6 +156,7 @@ body {
           margin-right: -.5rem;
           margin-left: auto; } }
       .header .nav-buttons .btn-link {
+        font-weight: 600;
         margin-right: 2.2rem; }
         @media (max-width: 991px) {
           .header .nav-buttons .btn-link {
@@ -232,22 +243,31 @@ body {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center; }
   @media (max-width: 991px) {
     .footer-main {
       padding-top: 5.7rem;
       padding-bottom: 5.2rem; } }
+  @media (max-width: 575px) {
+    .footer-main {
+      flex-wrap: wrap; } }
   .footer-main-list {
     width: 100%;
     max-width: 20rem;
     text-align: center;
     list-style: none; }
+    @media (max-width: 575px) {
+      .footer-main-list {
+        max-width: 50%; } }
     .footer-main-list:not(:last-of-type) {
       margin-right: 5.5rem; }
       @media (max-width: 991px) {
         .footer-main-list:not(:last-of-type) {
           margin-right: 0; } }
+    @media (max-width: 575px) {
+      .footer-main-list:first-of-type {
+        margin-bottom: 4.2rem; } }
     .footer-main-list-item {
       margin-bottom: 1.5rem; }
       @media (max-width: 991px) {
@@ -722,6 +742,10 @@ body {
     .section-dashboard {
       padding-top: 4rem;
       padding-bottom: 7rem; } }
+  @media (max-width: 575px) {
+    .section-dashboard {
+      padding-top: 3.5rem;
+      padding-bottom: 4.37rem; } }
   .section-dashboard-img {
     margin-bottom: 6.4rem;
     width: 100%;
@@ -733,6 +757,12 @@ body {
         margin-top: 2.8rem;
         order: 2;
         max-width: 64.4rem; } }
+    @media (max-width: 575px) {
+      .section-dashboard-img {
+        margin-bottom: 4rem;
+        margin-top: 0;
+        order: 0;
+        max-width: 99%; } }
   .section-dashboard-main-title {
     margin-bottom: 3.3rem;
     margin-left: auto;
@@ -748,6 +778,12 @@ body {
         font-size: 2.9rem;
         line-height: 1.31;
         max-width: 37rem; } }
+    @media (max-width: 575px) {
+      .section-dashboard-main-title {
+        margin-bottom: 1.8rem;
+        font-size: 1.9rem;
+        line-height: 1.58;
+        color: #000000; } }
   .section-dashboard-main-text {
     margin-bottom: 4.1rem;
     margin-left: auto;
@@ -763,6 +799,10 @@ body {
         margin-bottom: 2.6rem;
         font-size: 1.4rem;
         line-height: 1.71; } }
+    @media (max-width: 575px) {
+      .section-dashboard-main-text {
+        max-width: 81.1%;
+        line-height: 1.58; } }
   .section-dashboard-main-buttons .btn {
     padding: 1.4rem 2.1rem;
     font-size: 1.6rem; }
@@ -783,6 +823,9 @@ body {
     .section-banner {
       padding-top: 6.6rem;
       padding-bottom: 6.9rem; } }
+  @media (max-width: 575px) {
+    .section-banner {
+      display: none; } }
   .section-banner.green {
     background-color: #4ac623;
     color: #FFF; }
@@ -812,6 +855,39 @@ body {
       @media (max-width: 991px) {
         .section-banner-main-content.right {
           max-width: 18.1rem; } }
+
+.section-banner-mobile {
+  display: none;
+  padding-top: 5.5rem;
+  padding-bottom: 5rem;
+  border-top: 1.5px solid #F2F0F2;
+  border-bottom: 1.5px solid #F2F0F2;
+  text-align: center; }
+  @media (max-width: 575px) {
+    .section-banner-mobile {
+      display: block; } }
+  .section-banner-mobile-main-img {
+    margin-bottom: 1.4rem;
+    max-width: 4.8rem; }
+  .section-banner-mobile-main-title {
+    margin-bottom: 1.7rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.36;
+    color: #1c1c1c; }
+  .section-banner-mobile-main-text {
+    margin-bottom: 3.1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30.8rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    color: #2f2f2f; }
+  .section-banner-mobile-main .btn {
+    padding: .9rem 1.9rem;
+    font-weight: 500;
+    font-size: 1.6rem; }
 
 .activate-toc {
   margin-bottom: 1.8rem; }
