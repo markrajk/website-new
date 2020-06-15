@@ -1128,8 +1128,12 @@ body {
 
       //TABLET
       @include respond(desktop-md) {
-        flex-direction: column;
         margin-right: 0;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        flex-direction: column;
       }
 
       .section-info-card-main {
@@ -1137,8 +1141,13 @@ body {
         margin-right: 8rem;
 
 
-        //TABLET
+        //MOBILE
         @include respond(desktop-md) {
+          margin-right: 4rem;
+        }
+
+        //MOBILE
+        @include respond(desktop-xsm) {
           margin-right: 0;
         }
       }
