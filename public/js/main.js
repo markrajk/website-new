@@ -55,6 +55,8 @@ var tableOfContentPos = document.querySelector('.activate-toc');
 
 var giveFeedbackCard = document.getElementById('give-feedback');
 var receiveFeedbackCard = document.getElementById('receive-feedback');
+var developingTeamsCard = document.getElementById('developing-teams');
+var theDashboardCard = document.getElementById('the-dashboard');
 
 var tocLinks = document.querySelectorAll('.table-of-content-link');
 
@@ -96,6 +98,30 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
         document
           .querySelector('[href="#receive-feedback"]')
+          .classList.add('active');
+      }
+    }
+
+    if (
+      window.scrollY >=
+      developingTeamsCard.offsetTop - header.offsetHeight - 30
+    ) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+        document
+          .querySelector('[href="#developing-teams"]')
+          .classList.add('active');
+      }
+    }
+
+    if (
+      window.scrollY >=
+      theDashboardCard.offsetTop - header.offsetHeight - 30
+    ) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+        document
+          .querySelector('[href="#the-dashboard"]')
           .classList.add('active');
       }
     }

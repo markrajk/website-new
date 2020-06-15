@@ -216,11 +216,19 @@ body {
   z-index: 2000;
   transition: all .25s ease-in-out;
 
+
   & .nav {
     padding-bottom: .3rem;
     height: 8.4rem;
     display: flex;
     align-items: center;
+    
+
+    //TABLET
+    @include respond(desktop-md) {
+      height: 7rem;
+      border-bottom: 1.5px solid #F1F1F1;
+    }
    
     &.container {
       @include respond(desktop-xsm) {
@@ -308,13 +316,17 @@ body {
 
         @include respond(desktop-md) {
           font-size: 1.6rem;
-          margin-right: 1.77rem;
+          margin-right: 1.6rem;
         }
       }
 
       & .btn-primary {
         padding: 1.2rem 2.4rem;
         font-size: 1.6rem;
+
+        @include respond(desktop-md) {
+          padding: 1.2rem 2.2rem;
+        }
       }
 
       & .btn-outlined {
@@ -427,6 +439,121 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+// ==================================
+// FOOTER
+// ==================================
+.footer {
+
+  &-main {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-list {
+      width: 100%;
+      max-width: 20rem;
+      text-align: center;
+      list-style: none;
+
+      &:not(:last-of-type) {
+        margin-right: 5.5rem;
+      }
+
+      &-item {
+        margin-bottom: 1.5rem;
+        &-title {
+          margin-bottom: .4rem;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1.63;
+          letter-spacing: 0.16px;
+          color: #313131;
+        }
+
+        &-link {
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 1.73;
+          letter-spacing: 0.15px;
+          color: #8b8b8b;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &-mid {
+    padding: 2.5rem 0;
+    background-color: #f5f5f5;
+
+    & .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-links {
+
+      &-link {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.47;
+        letter-spacing: 0.15px;
+        color: #454545;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 3rem;
+        }
+      }
+    }
+
+    &-lng {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.47;
+      letter-spacing: 0.15px;
+      color: #454545;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-copy {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+    background-color: #ebeaeb;
+
+    &-text {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.76;
+      letter-spacing: 0.13px;
+      color: #454545;
     }
   }
 }
@@ -701,6 +828,7 @@ body {
 // TABLE OF CONTENT
 //=====================================
 .table-of-content-wrapper {
+  max-width: 100vw;
   padding-top: 2rem;
   position: sticky;
   top: 0;
@@ -817,8 +945,8 @@ body {
 .section-info {
   
   &-card {
-    padding-top: 13.7rem;
-    padding-bottom: 7rem;
+    padding-top: 7.6rem;
+    padding-bottom: 7.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -838,7 +966,7 @@ body {
     &-img {
       width: 100%;
       min-width: 0;
-      max-width: 30.84rem;
+      max-width: 33rem;
 
       //TABLET
       @include respond(desktop-md) {
@@ -853,8 +981,8 @@ body {
     }
 
     &-main {
-      margin-left: 9.2rem;
-      max-width: 40rem;
+      margin-left: 8rem;
+      max-width: 54.6rem;
 
       //TABLET
       @include respond(desktop-md) {
@@ -869,10 +997,10 @@ body {
       }
       
       &-title {
-        margin-bottom: 3.5rem;
-        font-size: 3.6rem;
+        margin-bottom: 2.5rem;
+        font-size: 4rem;
         font-weight: 700;
-        line-height: 1.61;
+        line-height: 1.45;
         color: #1c1c1c;
 
         //TABLET
@@ -892,10 +1020,10 @@ body {
       }
 
       &-text {
-        margin-bottom: 5rem;
+        margin-bottom: 3.5rem;
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 1.56;
+        line-height: 1.67;
         color: #1c1c1c;
 
         //TABLET
@@ -920,6 +1048,7 @@ body {
         white-space: nowrap;
 
         & .btn {
+          padding: .85rem 1.9rem;
           font-size: 1.6rem;
           font-weight: 600;
           line-height: 1.75;
@@ -938,15 +1067,126 @@ body {
       }
     }
 
-    &.card-02 {
-      padding-top: 7rem;
+    &.reversed {
+      margin-right: 6.4rem;
+      flex-direction: row-reverse;
 
-      & .section-info-card-main-buttons {
-        white-space: normal;
+      .section-info-card-main {
+        margin-left: 0;
+        margin-right: 8rem;
 
-        & > *:not(:last-child) {
-          margin-bottom: 1.5rem;
+
+      //TABLET
+      @include respond(desktop-md) {
+        margin-right: 4rem;
+      }
+      }
+    }
+
+    // &.card-02 {
+    //   padding-top: 7rem;
+
+    //   & .section-info-card-main-buttons {
+    //     white-space: normal;
+
+    //     & > *:not(:last-child) {
+    //       margin-bottom: 1.5rem;
+    //     }
+    //   }
+    // }
+  }
+}
+
+//=====================================
+// SECTION DASBOARD
+//=====================================
+.section-dashboard {
+  padding-top: 5.8rem;
+  padding-bottom: 8.8rem;
+  text-align: center;
+
+  &-img {
+    margin-bottom: 6.4rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 90rem;
+  }
+
+  &-main {
+
+    &-title {
+      margin-bottom: 3.3rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50.5rem;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.45;
+      color: #1c1c1c;
+    }
+
+    &-text {
+      margin-bottom: 4.1rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 66.2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.67;
+      color: #1c1c1c;
+    }
+
+    &-buttons {
+
+      & .btn {
+        padding: 1.4rem 2.1rem;
+        font-size: 1.6rem;
+
+        &-primary {
+          margin-right: 2.5rem;
         }
+      }
+    }
+  }
+}
+
+//=====================================
+// BANNER DASBOARD
+//=====================================
+.section-banner {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+
+  &.green {
+    background-color: $green-primary;
+    color: #FFF;
+  }
+
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    &-content {
+
+      &-link {
+        font-size: 3.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #ffffff;
+
+        & a {
+          color: #FFF;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+
+      &.left {
+        max-width: 41.4rem;
+      }
+
+      &.right {
+        max-width: 32.6rem;
       }
     }
   }
