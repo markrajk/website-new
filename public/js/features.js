@@ -125,7 +125,7 @@ window.addEventListener('scroll', function () {
     header.classList.remove('header-scroll');
   }
 
-  if (window.scrollY >= tableOfContentPos.offsetTop - 60) {
+  if (window.scrollY >= tableOfContentPos.offsetTop - 90) {
     header.style.top = '-8.4rem';
     header.style.transitionDuration = `${2 / Math.abs(checkScrollSpeed())}s`;
     if (

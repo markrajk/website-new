@@ -538,7 +538,7 @@ body {
       .section-video-img {
         max-width: 68rem; } }
 
-.table-of-content-wrapper {
+.main-overview .table-of-content-wrapper {
   max-width: 100vw;
   padding-top: 2rem;
   position: sticky;
@@ -546,7 +546,7 @@ body {
   transition: all .25s ease-in-out;
   background: linear-gradient(0deg, transparent, #FFF 80%); }
 
-.table-of-content {
+.main-overview .table-of-content {
   transform: translate(0, 0);
   padding: 1rem;
   margin: 0 auto;
@@ -559,7 +559,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(173, 173, 173, 0.16);
   border: solid 1px #f2f2f2;
   background-color: #ffffff; }
-  .table-of-content-link {
+  .main-overview .table-of-content-link {
     width: 100%;
     max-width: 23rem;
     display: flex;
@@ -573,55 +573,87 @@ body {
     text-decoration: none;
     white-space: nowrap; }
     @media (max-width: 1199px) {
-      .table-of-content-link {
+      .main-overview .table-of-content-link {
         font-size: 1.55rem;
         max-width: 20.3rem; } }
     @media (max-width: 991px) {
-      .table-of-content-link {
+      .main-overview .table-of-content-link {
         font-size: 1.5rem;
         max-width: 17rem; } }
     @media (max-width: 900px) {
-      .table-of-content-link {
+      .main-overview .table-of-content-link {
         height: 4rem;
         font-size: 1.4rem;
         max-width: 15.2rem; } }
     @media (max-width: 769px) {
-      .table-of-content-link {
+      .main-overview .table-of-content-link {
         font-size: 1.3rem; } }
     @media (max-width: 450px) {
-      .table-of-content-link span {
+      .main-overview .table-of-content-link span {
         display: none; } }
     @media (max-width: 630px) {
-      .table-of-content-link:nth-of-type(4) {
+      .main-overview .table-of-content-link:nth-of-type(4) {
         display: none; } }
-    .table-of-content-link:not(:last-of-type) {
+    .main-overview .table-of-content-link:not(:last-of-type) {
       padding: 0 .6rem; }
-    .table-of-content-link.active {
+    .main-overview .table-of-content-link.active {
       color: #4ac623;
       font-weight: 600;
       border-radius: 6px;
       background-color: rgba(74, 198, 35, 0.1); }
-  .table-of-content .btn {
+  .main-overview .table-of-content .btn {
     height: 4.8rem;
     padding: 1.35rem 3rem;
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.16px; }
     @media (max-width: 1199px) {
-      .table-of-content .btn {
+      .main-overview .table-of-content .btn {
         font-size: 1.55rem; } }
     @media (max-width: 991px) {
-      .table-of-content .btn {
+      .main-overview .table-of-content .btn {
         font-size: 1.5rem;
         padding: 1.35rem 1.85rem; } }
     @media (max-width: 900px) {
-      .table-of-content .btn {
+      .main-overview .table-of-content .btn {
         height: 4rem;
         font-size: 1.4rem;
         padding: 1.35rem 1.5rem; } }
     @media (max-width: 769px) {
-      .table-of-content .btn {
+      .main-overview .table-of-content .btn {
         display: none; } }
+
+.main-features .table-of-content-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 1.5px solid #EFF0F3; }
+
+.main-features .table-of-content {
+  padding-top: 3.4rem;
+  padding-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .main-features .table-of-content-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer; }
+    .main-features .table-of-content-item:hover .table-of-content-item-icon, .main-features .table-of-content-item:focus .table-of-content-item-icon {
+      transform: translate(0, -15px); }
+    .main-features .table-of-content-item-icon {
+      width: 7rem;
+      height: 7rem;
+      transform: translate(0, 0);
+      transition: transform .3s ease-in-out; }
+    .main-features .table-of-content-item-link {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 3.57;
+      color: #000000;
+      text-decoration: none; }
 
 .section-info-card {
   padding-top: 7.6rem;
@@ -862,7 +894,8 @@ body {
   padding-bottom: 5rem;
   border-top: 1.5px solid #F2F0F2;
   border-bottom: 1.5px solid #F2F0F2;
-  text-align: center; }
+  text-align: center;
+  background-color: #FCFCFC; }
   @media (max-width: 575px) {
     .section-banner-mobile {
       display: block; } }
