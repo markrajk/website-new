@@ -1915,7 +1915,6 @@ body {
   //MOBILE
   @include respond(desktop-xsm) {
     padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   &-subtitle {
@@ -2034,7 +2033,7 @@ body {
 
   //TABLET 
   @include respond(desktop-md) {
-    margin-top: 0;
+    margin-top: 6rem;
     margin-bottom: 6rem;
   }
 
@@ -2090,6 +2089,12 @@ body {
           justify-content: space-between;
         }
 
+         //MOBILE
+         @include respond(desktop-xsm) {
+          flex-wrap: wrap;
+        }
+
+
         &-item {
           width: 100%;
 
@@ -2101,6 +2106,13 @@ body {
               margin-bottom: 0;
               margin-right: 1.2rem;
             }
+          }
+
+          //MOBILE
+          @include respond(desktop-xsm) {
+            margin-right: 0!important;
+            margin-bottom: 1.2rem!important;
+            width: 50%;
           }
 
           &-link {
@@ -2127,6 +2139,11 @@ body {
               letter-spacing: 0.23px;
             }
 
+            //MOBILE
+            @include respond(desktop-xsm) {
+              max-width: 90%;
+            }
+
             &.active,
             &:hover,
             &:focus {
@@ -2146,6 +2163,11 @@ body {
 .section-pdf {
   margin-top: 10rem;
   text-align: center;
+
+  //TABLET
+  @include respond(desktop-md) {
+    margin-top: 5rem;
+  }
 
   &-title.f-b-title {
     //TABLET
@@ -2172,12 +2194,17 @@ body {
     &-img {
       width: 100%;
       min-width: 0;
-      width: 56.5rem;
+      max-width: 56.5rem;
 
       //TABLET
       @include respond(desktop-md) {
         margin-bottom: 4rem;
         max-width: 41.8rem;
+      }
+
+      //TABLET
+      @include respond(desktop-xsm) {
+        max-width: 80%;
       }
     }
 

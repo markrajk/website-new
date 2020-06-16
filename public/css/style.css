@@ -1153,8 +1153,7 @@ body {
       padding-bottom: 0; } }
   @media (max-width: 575px) {
     .section-feature-teams {
-      padding-top: 5rem;
-      padding-bottom: 5rem; } }
+      padding-top: 5rem; } }
   .section-feature-teams-text {
     margin-left: auto;
     margin-right: auto;
@@ -1210,7 +1209,7 @@ body {
   text-align: center; }
   @media (max-width: 991px) {
     .main-features .section-dashboard {
-      margin-top: 0;
+      margin-top: 6rem;
       margin-bottom: 6rem; } }
   .main-features .section-dashboard-title {
     margin-left: auto;
@@ -1246,6 +1245,9 @@ body {
           max-width: 66.4rem;
           display: flex;
           justify-content: space-between; } }
+      @media (max-width: 575px) {
+        .main-features .section-dashboard-main-body-list {
+          flex-wrap: wrap; } }
       .main-features .section-dashboard-main-body-list-item {
         width: 100%; }
         .main-features .section-dashboard-main-body-list-item:not(:last-of-type) {
@@ -1254,6 +1256,11 @@ body {
             .main-features .section-dashboard-main-body-list-item:not(:last-of-type) {
               margin-bottom: 0;
               margin-right: 1.2rem; } }
+        @media (max-width: 575px) {
+          .main-features .section-dashboard-main-body-list-item {
+            margin-right: 0 !important;
+            margin-bottom: 1.2rem !important;
+            width: 50%; } }
         .main-features .section-dashboard-main-body-list-item-link {
           display: inline-flex;
           align-items: center;
@@ -1276,6 +1283,9 @@ body {
               font-size: 1.5rem;
               font-weight: 500;
               letter-spacing: 0.23px; } }
+          @media (max-width: 575px) {
+            .main-features .section-dashboard-main-body-list-item-link {
+              max-width: 90%; } }
           .main-features .section-dashboard-main-body-list-item-link.active, .main-features .section-dashboard-main-body-list-item-link:hover, .main-features .section-dashboard-main-body-list-item-link:focus {
             background-color: #4ac623;
             color: #fff; }
@@ -1283,6 +1293,9 @@ body {
 .section-pdf {
   margin-top: 10rem;
   text-align: center; }
+  @media (max-width: 991px) {
+    .section-pdf {
+      margin-top: 5rem; } }
   @media (max-width: 991px) {
     .section-pdf-title.f-b-title {
       max-width: 50rem; } }
@@ -1300,11 +1313,14 @@ body {
     .section-pdf-card-img {
       width: 100%;
       min-width: 0;
-      width: 56.5rem; }
+      max-width: 56.5rem; }
       @media (max-width: 991px) {
         .section-pdf-card-img {
           margin-bottom: 4rem;
           max-width: 41.8rem; } }
+      @media (max-width: 575px) {
+        .section-pdf-card-img {
+          max-width: 80%; } }
     .section-pdf-card-main {
       margin-left: 7rem;
       text-align: left;
