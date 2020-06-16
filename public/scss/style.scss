@@ -1725,21 +1725,19 @@ body {
   }
 
   &-text {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 75rem;
     // margin-bottom: 7.5rem;
     // font-size: 1.9rem;
     // font-weight: 500;
     // line-height: 1.53;
     // color: #5f5f5f;
 
-    // //TABLET
-    // @include respond(desktop-md) {
-    //   margin-bottom: 5rem;
-    //   margin-left: auto;
-    //   margin-right: auto;
-    //   max-width: 28.8rem;
-    //   font-size: 1.6rem;
-    //   line-height: 1.5;
-    // }
+    //TABLET
+    @include respond(desktop-md) {
+      // max-width: 38.8rem!important;
+    }
   }
 
   &-body {
@@ -1790,6 +1788,7 @@ body {
         }
 
         &-text {
+          max-width: 44rem;
           // max-width: 39.4rem;
           // font-size: 1.6rem;
           // font-weight: 400;
@@ -1880,7 +1879,7 @@ body {
     &-text {
       margin-left: auto;
       margin-right: auto;
-      max-width: 58rem;
+      max-width: 65rem;
       font-size: 1.6rem;
       font-weight: 400;
       line-height: 1.56;
@@ -1889,7 +1888,7 @@ body {
 
       //TABLET
       @include respond(desktop-md) {
-        max-width: 39.4rem;
+        max-width: 55rem;
       }
     }
   }
@@ -1926,6 +1925,9 @@ body {
   }
 
   &-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75rem;
     // margin-bottom: 8.2rem;
     // font-size: 2rem;
     // font-weight: 400;
@@ -1971,7 +1973,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        max-width: 62.1rem;
+        max-width: 55rem;
         padding-top: 4rem;
         padding-bottom: 6rem;
         display: flex;
@@ -2071,7 +2073,7 @@ body {
     margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 28.8rem;
+    max-width: 40rem;
     font-size: 1.6rem;
     line-height: 1.5;
   }
@@ -2100,7 +2102,7 @@ body {
   }
 }
 .f-s-text {
-  max-width: 39.4rem;
+  //max-width: 39.4rem;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.56;
@@ -2109,7 +2111,7 @@ body {
 
   //MOBILE
   @include respond(desktop-xsm) {
-    max-width: 28.2rem;
+    //max-width: 28.2rem;
     font-size: 1.4rem;
     color: #1c1c1c;
   }
