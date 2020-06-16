@@ -671,8 +671,7 @@ body {
     text-align: center; }
     @media (max-width: 991px) {
       .main-features .table-of-content-item {
-        width: 100%;
-        min-width: 14rem; } }
+        width: 100%; } }
     .main-features .table-of-content-item:hover .table-of-content-item-icon, .main-features .table-of-content-item:focus .table-of-content-item-icon {
       transform: translate(0, -15px); }
     .main-features .table-of-content-item-icon {
