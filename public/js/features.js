@@ -110,6 +110,9 @@ var pdfReportsCard = document.getElementById('pdf-reports');
 
 var tocLinks = document.querySelectorAll('.table-of-content-item-link');
 
+var subheaderList = document.querySelector('.table-of-content-wrapper');
+var subheaderItem;
+
 // for (var i = 0; i < tocLinks.length; i++) {
 //   tocLinks[i].addEventListener('click', function (e) {
 //     for (var j = 0; j < tocLinks.length; j++) {
@@ -136,10 +139,15 @@ window.addEventListener('scroll', function () {
     ) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#giving-feedback"]')
-          .classList.add('active');
       }
+
+      subheaderItem = document.querySelector('[href="#giving-feedback"]');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
     }
     if (
       window.scrollY >=
@@ -147,10 +155,15 @@ window.addEventListener('scroll', function () {
     ) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#receiving-feedback"]')
-          .classList.add('active');
       }
+
+      subheaderItem = document.querySelector('[href="#receiving-feedback"]');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
     }
 
     if (
@@ -159,10 +172,15 @@ window.addEventListener('scroll', function () {
     ) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#developing-teams"]')
-          .classList.add('active');
       }
+
+      subheaderItem = document.querySelector('[href="#developing-teams"]');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
     }
 
     if (
@@ -171,16 +189,28 @@ window.addEventListener('scroll', function () {
     ) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#the-dashboard"]')
-          .classList.add('active');
       }
+
+      subheaderItem = document.querySelector('[href="#the-dashboard"]');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
     }
     if (window.scrollY >= pdfReportsCard.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document.querySelector('[href="#pdf-reports"]').classList.add('active');
       }
+
+      subheaderItem = document.querySelector('[href="#pdf-reports"]');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
     }
     // if (window.scrollY >= hideToc.offsetTop - 150) {
     //   tableOfContent.classList.add('hide');
@@ -224,3 +254,43 @@ var checkScrollSpeed = (function (settings) {
     return delta;
   };
 })();
+
+function docReady(fn) {
+  // see if DOM is already available
+  if (
+    document.readyState === 'complete' ||
+    document.readyState === 'interactive'
+  ) {
+    // call on next available tick
+    setTimeout(fn, 1);
+  } else {
+    //document.addEventListener('DOMContentLoaded', fn);
+    setTimeout(fn, 100);
+  }
+}
+
+// docReady(function () {
+//   console.log(subheaderItem.offsetLeft);
+//   console.log(subheaderList.offsetWidth);
+//   subheaderList.scrollLeft =
+//     subheaderItem.offsetLeft -
+//     subheaderList.offsetWidth / 2 +
+//     subheaderItem.offsetWidth / 2;
+// });
+
+// for (var i = 0; i < tocLinks.length; i++) {
+//   tocLinks[i].addEventListener('click', function () {
+//     console.log('Clicked');
+//     var subheaderList = document.querySelector('.table-of-content-wrapper');
+//     var subheaderItem = document.querySelector(
+//       '.table-of-content-item-link.active'
+//     );
+
+//     console.log(subheaderItem.offsetLeft);
+//     console.log(subheaderList.offsetWidth);
+//     subheaderList.scrollLeft =
+//       subheaderItem.offsetLeft -
+//       subheaderList.offsetWidth / 2 +
+//       subheaderItem.offsetWidth / 2;
+//   });
+// }
