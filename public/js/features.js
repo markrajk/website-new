@@ -102,12 +102,13 @@ var tableOfContent = document.querySelector('.table-of-content-wrapper');
 var tableOfContentPos = document.querySelector('.activate-toc');
 var hideToc = document.getElementById('hide-toc');
 
-var giveFeedbackCard = document.getElementById('give-feedback');
-var receiveFeedbackCard = document.getElementById('receive-feedback');
+var giveFeedbackCard = document.getElementById('giving-feedback');
+var receiveFeedbackCard = document.getElementById('receiving-feedback');
 var developingTeamsCard = document.getElementById('developing-teams');
 var theDashboardCard = document.getElementById('the-dashboard');
+var pdfReportsCard = document.getElementById('pdf-reports');
 
-var tocLinks = document.querySelectorAll('.table-of-content-link');
+var tocLinks = document.querySelectorAll('.table-of-content-item-link');
 
 // for (var i = 0; i < tocLinks.length; i++) {
 //   tocLinks[i].addEventListener('click', function (e) {
@@ -136,7 +137,7 @@ window.addEventListener('scroll', function () {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
         document
-          .querySelector('[href="#give-feedback"]')
+          .querySelector('[href="#giving-feedback"]')
           .classList.add('active');
       }
     }
@@ -147,7 +148,7 @@ window.addEventListener('scroll', function () {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
         document
-          .querySelector('[href="#receive-feedback"]')
+          .querySelector('[href="#receiving-feedback"]')
           .classList.add('active');
       }
     }
@@ -175,12 +176,18 @@ window.addEventListener('scroll', function () {
           .classList.add('active');
       }
     }
-    if (window.scrollY >= hideToc.offsetTop - 150) {
-      tableOfContent.classList.add('hide');
-      console.log('HIDEN');
-    } else {
-      tableOfContent.classList.remove('hide');
+    if (window.scrollY >= pdfReportsCard.offsetTop - header.offsetHeight - 30) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+        document.querySelector('[href="#pdf-reports"]').classList.add('active');
+      }
     }
+    // if (window.scrollY >= hideToc.offsetTop - 150) {
+    //   tableOfContent.classList.add('hide');
+    //   console.log('HIDEN');
+    // } else {
+    //   tableOfContent.classList.remove('hide');
+    // }
   } else {
     header.style.top = '0';
     header.classList.remove('hide');

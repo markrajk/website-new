@@ -668,8 +668,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-    cursor: pointer; }
+    text-align: center; }
     @media (max-width: 991px) {
       .main-features .table-of-content-item {
         width: 100%;
@@ -698,6 +697,8 @@ body {
       @media (max-width: 575px) {
         .main-features .table-of-content-item-link {
           font-size: 1.25rem; } }
+      .main-features .table-of-content-item-link.active {
+        font-weight: 700; }
 
 .section-info-card {
   padding-top: 7.6rem;
@@ -1440,7 +1441,7 @@ body {
       visibility: hidden;
       opacity: 0; } }
 
-.main-overview .activate-toc {
+.main-features .activate-toc {
   margin-bottom: 0; }
 
 .header-scroll {

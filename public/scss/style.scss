@@ -1100,7 +1100,7 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    cursor: pointer;
+
 
     @include respond(desktop-md) {
       width: 100%;
@@ -1142,6 +1142,10 @@ body {
 
       @include respond(desktop-xsm) {
         font-size: 1.25rem;
+      }
+
+      &.active {
+        font-weight: 700;
       }
     }
   }
@@ -2372,7 +2376,7 @@ body {
   }
 }
 
-.main-overview .activate-toc {
+.main-features .activate-toc {
   margin-bottom: 0;
 }
 
