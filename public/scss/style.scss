@@ -658,14 +658,18 @@ body {
 }
 
 .main-features.main {
-  padding-top: 9rem;
+  padding-top: 8.4rem;
+
+  @include respond(desktop-md) {
+    padding-top: 7rem;
+  }
 }
 
 
 //=====================================
 // HERO SECTION
 //=====================================
-.section-hero {
+.main-overview .section-hero {
   padding-top: 9rem;
   padding-bottom: 7.4rem;
   display: flex;
@@ -1536,6 +1540,121 @@ body {
 //                                                           FEATURES PAGE
 //=========================================================================================================================================
 //=====================================
+// FEATURE HERO SECTION
+//=====================================
+.main-features .section-hero {
+  padding-top: 10.6rem;
+  padding-bottom: 9rem;
+  background-color: $green-primary;
+  color: #ffffff;
+  text-align: center;
+
+  //TABLET
+  @include respond(desktop-md) {
+    padding-top: 9.5rem;
+    padding-bottom: 8rem;
+  }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  &-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.53;
+  }
+
+  &-title {
+    margin-bottom: 3rem;
+    font-size: 4.9rem;
+    font-weight: 600;
+    line-height: 1.02;
+
+    & span {
+      display: none;
+
+      //TABLET
+      @include respond(desktop-xsm) {
+        display: inline;
+      }
+    }
+
+    //TABLET
+    @include respond(desktop-md) {
+      font-size: 4.4rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      font-size: 3.5rem;
+      line-height: 1.31;
+      letter-spacing: -0.88px;
+    }
+  }
+
+  &-text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    max-width: 77rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    //TABLET
+    @include respond(desktop-md) {
+      font-size: 1.8rem;
+      max-width: 69.2rem;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.76;
+    color: #ffffff;
+
+    //TABLET
+    @include respond(desktop-md) {
+      font-size: 1.5rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      max-width: 100%;
+      font-size: 1.5rem;
+      line-height: 1.6;
+
+      & a {
+        color: inherit;
+        font-weight: 600;
+      }
+    }
+
+    &-icon {
+      margin-right: 1.3rem;
+      font-size: 3rem;
+
+      //TABLET
+      @include respond(desktop-md) {
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+//=====================================
 // FEATURE DOUBLE CARD SECTION
 //=====================================
 .section-feature-double {
@@ -1546,7 +1665,13 @@ body {
   //TABLET
   @include respond(desktop-md) {
     padding-top: 8rem;
-    padding-bottom: 6rem;
+    padding-bottom: 4.5rem;
+  }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 5rem;
+    padding-bottom: 4.5rem;
   }
   
   &-subtitle {
@@ -1625,6 +1750,12 @@ body {
         width: 100%;
         min-width: 0;
         max-width: 28.4rem;
+
+        //MOBILE
+        @include respond(desktop-xsm) {
+          margin-bottom: 3rem;
+          max-width: 19.3rem;
+        }
       }
 
       &-main {
@@ -1657,6 +1788,11 @@ body {
           padding-right: 0;
           border-right: 0;
         }
+
+        //MOBILE
+        @include respond(desktop-xsm) {
+          margin-bottom: 4.5rem;
+        }
       }
 
       &.card-02 {
@@ -1684,6 +1820,11 @@ body {
     padding-bottom: 6rem;
   }
 
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-bottom: 4.5rem;
+  }
+
   &-img {
     margin-bottom: 4rem;
     width: 100%;
@@ -1693,6 +1834,11 @@ body {
     //TABLET
     @include respond(desktop-md) {
       max-width: 67rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      padding-bottom: 3.5rem;
     }
   }
 
@@ -1735,6 +1881,12 @@ body {
 .section-feature-teams {
   padding-top: 10rem;
   text-align: center;
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 
   &-subtitle {
     // margin-bottom: 1.8rem;
@@ -1805,6 +1957,12 @@ body {
         border-bottom: solid 2px #eaeaea;
       }
 
+      //MOBILE
+      @include respond(desktop-xsm) {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+      }
+
       &-title {
         // margin-bottom: 2.1rem;
         // font-size: 2.5rem;
@@ -1840,6 +1998,13 @@ body {
     font-size: 2rem;
     line-height: 1.45;
   }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    margin-bottom: 1.5rem;
+    font-size: 1.9rem;
+    line-height: 1.53;
+  }
 }
 .f-b-title {
   margin-bottom: 3.3rem;
@@ -1859,6 +2024,15 @@ body {
     line-height: 1.26;
     letter-spacing: -1.15px;
   }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    margin-bottom: 2rem;
+    max-width: 33.2rem;
+    font-size: 3.5rem;
+    line-height: 1.31;
+    letter-spacing: -0.88px;
+  }
 }
 .f-b-text {
   margin-bottom: 7.5rem;
@@ -1876,6 +2050,14 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
   }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    margin-bottom: 4.5rem;
+    max-width: 27rem;
+    font-size: 1.5rem;
+    line-height: 1.47;
+  }
 }
 .f-s-title {
   margin-bottom: 1.6rem;
@@ -1883,6 +2065,14 @@ body {
   font-weight: 600;
   line-height: 1;
   color: #000000;
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    margin-bottom: 1.6rem;
+    font-size: 2.2rem;
+    line-height: 1.36;
+    color: #000000;
+  }
 }
 .f-s-text {
   max-width: 39.4rem;
@@ -1891,6 +2081,13 @@ body {
   line-height: 1.56;
   letter-spacing: 0.16px;
   color: #2c2c2c;
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    max-width: 28.2rem;
+    font-size: 1.4rem;
+    color: #1c1c1c;
+  }
 }
 
 //=========================================================================================================================================
