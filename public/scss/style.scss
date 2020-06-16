@@ -467,7 +467,7 @@ body {
 // FOOTER
 // ==================================
 .footer {
-
+  border-top: 2px solid #EAEAEA;
   &-main {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
@@ -2034,10 +2034,10 @@ body {
   }
 
   &-subtitle {}
+  
   &-title {
     margin-left: auto;
     margin-right: auto;
-    max-width: 52rem;
   }
 
   &-text {
@@ -2129,6 +2129,85 @@ body {
               color: #fff;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+//=====================================
+// FEATURES PDF SECTION
+//=====================================
+.section-pdf {
+  margin-top: 10rem;
+  text-align: center;
+
+  &-title.f-b-title {
+    //TABLET
+    @include respond(desktop-md) {
+      max-width: 50rem;
+    }
+    //MOBILE
+    @include respond(desktop-xsm) {
+      max-width: 33.2rem;
+    }
+  }
+
+  &-card {
+    margin-bottom: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    //TABLET
+    @include respond(desktop-md) {
+      flex-direction: column;
+    }
+
+    &-img {
+      width: 100%;
+      min-width: 0;
+      width: 56.5rem;
+
+      //TABLET
+      @include respond(desktop-md) {
+        margin-bottom: 4rem;
+        max-width: 41.8rem;
+      }
+    }
+
+    &-main {
+      margin-left: 7rem;
+      text-align: left;
+      max-width: 48.6rem;
+
+      //TABLET
+      @include respond(desktop-md) {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      &-title {
+
+      }
+    }
+
+    &.card-02 {
+      margin-top: 7.5rem;
+      flex-direction: row-reverse;
+
+      //TABLET
+      @include respond(desktop-md) {
+        flex-direction: column;
+      }
+
+      & .section-pdf-card-main {
+        margin-left: 0;
+        margin-right: 7rem;
+
+        //TABLET
+        @include respond(desktop-md) {
+          margin-right: 0;
         }
       }
     }
