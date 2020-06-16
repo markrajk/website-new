@@ -2082,6 +2082,7 @@ body {
   @include respond(desktop-xsm) {
     margin-bottom: 4.5rem;
     max-width: 27rem;
+    max-width: 44rem;
     font-size: 1.5rem;
     line-height: 1.47;
   }
@@ -2109,9 +2110,12 @@ body {
   letter-spacing: 0.16px;
   color: #2c2c2c;
 
+  @include respond(desktop-md) {
+    max-width: 44rem;
+  }
+
   //MOBILE
   @include respond(desktop-xsm) {
-    //max-width: 28.2rem;
     font-size: 1.4rem;
     color: #1c1c1c;
   }
