@@ -1091,13 +1091,18 @@ body {
   
 
   &-item {
-    padding: 0 .75rem;
+    padding: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     cursor: pointer;
+
+    @include respond(desktop-md) {
+      width: 100%;
+      min-width: 14rem;
+    }
 
     // &:hover a,
     // &:focus a {
@@ -1110,10 +1115,11 @@ body {
     }
 
     &-icon {
-      margin-bottom: 1rem;
-      width: 7rem;
-      height: 7rem;
+      margin-bottom: 1.8rem;
+      width: 6.8rem;
+      height: 6.8rem;
       opacity: 1;
+      border-radius: 1.4rem;
       transform: translate(0,0);
       transition: transform .3s ease-in-out;
     }
@@ -1123,6 +1129,15 @@ body {
       font-weight: 400;
       color: #000000;
       text-decoration: none;
+      white-space: nowrap;
+
+      @include respond(desktop-md) {
+        font-size: 1.35rem;
+      }
+
+      @include respond(desktop-xsm) {
+        font-size: 1.25rem;
+      }
     }
   }
 }
