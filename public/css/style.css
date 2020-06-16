@@ -1097,7 +1097,7 @@ body {
         max-width: 67rem; } }
     @media (max-width: 575px) {
       .section-feature-single-img {
-        padding-bottom: 3.5rem; } }
+        margin-bottom: 3.5rem; } }
   .section-feature-single-main-title {
     margin-bottom: 1.8rem;
     font-size: 2.7rem;
