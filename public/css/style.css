@@ -1328,6 +1328,11 @@ body {
   @media (max-width: 575px) {
     .section-pdf-title.f-b-title {
       max-width: 33.2rem; } }
+  .section-pdf-text {
+    margin-bottom: 8.5rem; }
+    @media (max-width: 991px) {
+      .section-pdf-text {
+        margin-bottom: 4.5rem; } }
   .section-pdf-card {
     margin-bottom: 7.5rem;
     display: flex;

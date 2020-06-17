@@ -2221,6 +2221,14 @@ body {
     }
   }
 
+  &-text {
+    margin-bottom: 8.5rem;
+
+    @include respond(desktop-md) {
+      margin-bottom: 4.5rem;
+    }
+  }
+
   &-card {
     margin-bottom: 7.5rem;
     display: flex;
