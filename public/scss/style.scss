@@ -2043,20 +2043,28 @@ body {
       }
 
       &-title {
-        // margin-bottom: 2.1rem;
-        font-size: 2.4rem!important;
-        // font-weight: 600;
-        // line-height: 2;
-        // color: #000000;
+        margin-bottom: 2rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #000000;
+
+        //TABLET
+        @include respond(desktop-md) {
+         font-size: 2.6rem;
+        }
       }
 
       &-text {
-        // max-width: 39.4rem;
-        // font-size: 1.6rem;
-        // font-weight: 400;
-        // line-height: 1.63;
-        // letter-spacing: 0.16px;
-        // color: #2c2c2c;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.16px;
+        color: #2c2c2c;
+
+        //TABLET
+        @include respond(desktop-md) {
+          max-width: 41rem;
+         }
       }
     }
   }
