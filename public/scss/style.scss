@@ -1495,7 +1495,8 @@ body {
 
         //TABLET
         @include respond(desktop-md) {
-          max-width: 25.3rem;
+          text-align: center;
+          max-width: 100%;
         }
       }
 
