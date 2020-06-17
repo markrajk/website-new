@@ -1568,8 +1568,8 @@ body {
 // FEATURE HERO SECTION
 //=====================================
 .main-features .section-hero {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 10.6rem;
+  padding-bottom: 9rem;
   background-color: $green-primary;
   color: #ffffff;
   text-align: center;
@@ -1577,7 +1577,7 @@ body {
   //TABLET
   @include respond(desktop-md) {
     padding-top: 9.5rem;
-    padding-bottom: 9.5rem;
+    padding-bottom: 8.1rem;
   }
 
   //MOBILE
@@ -1684,12 +1684,12 @@ body {
 //=====================================
 .section-feature-double {
   padding-top: 8.5rem;
-  padding-bottom: 7rem;
+  padding-bottom: 8.5rem;
   text-align: center;
 
   //TABLET
   @include respond(desktop-md) {
-    padding-top: 8rem;
+    padding-top: 6rem;
     padding-bottom: 6rem;
   }
 
@@ -1737,7 +1737,8 @@ body {
   &-text {
     margin-right: auto;
     margin-left: auto;
-    max-width: 75rem;
+    margin-bottom: 7rem;
+    max-width: 84rem;
     // margin-bottom: 7.5rem;
     // font-size: 1.9rem;
     // font-weight: 500;
@@ -1746,6 +1747,7 @@ body {
 
     //TABLET
     @include respond(desktop-md) {
+      margin-bottom: 4rem;
       // max-width: 38.8rem!important;
     }
   }
@@ -1762,10 +1764,11 @@ body {
 
     &-card {
 
+      padding-top: 1.8rem;
+      padding-bottom: 3rem;
       //TABLET 
       @include respond(desktop-md) {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
       }
 
       // //MOBILE 
@@ -1808,7 +1811,7 @@ body {
       }
 
       &.card-01 {
-        padding-right: 10rem;
+        padding-right: 8.45rem;
         border-right: 1.5px solid #f1f1f1;
 
         //TABLET 
@@ -1826,7 +1829,7 @@ body {
       }
 
       &.card-02 {
-        padding-left: 10rem;
+        padding-left: 8.45rem;
 
         //TABLET 
         @include respond(desktop-md) {
@@ -1841,6 +1844,12 @@ body {
       }
     }
   }
+
+  // &-section-01 {
+  //   & .section-feature-double-text {
+      
+  //   }
+  // }
 }
 
 //=====================================
@@ -1884,7 +1893,7 @@ body {
 
     &-title {
       margin-bottom: 1.8rem;
-      font-size: 2.7rem;
+      font-size: 2.6rem;
       font-weight: 600;
       line-height: 1;
       color: #000000;
@@ -1898,7 +1907,7 @@ body {
     &-text {
       margin-left: auto;
       margin-right: auto;
-      max-width: 65rem;
+      max-width: 73rem;
       font-size: 1.6rem;
       font-weight: 400;
       line-height: 1.56;
@@ -1912,9 +1921,10 @@ body {
     }
   }
 
-  &.card-02 {
+  &.card-01 {
     & .section-feature-single-img {
-      
+      max-width: 80rem;
+
       //TABLET
       @include respond(desktop-md) {
         max-width: 57.5rem;
@@ -1924,7 +1934,7 @@ body {
 
   &.card-02 {
     & .section-feature-single-img {
-      max-width: 56.5rem;
+      max-width: 58.5rem;
     }
   }
 }
@@ -1939,6 +1949,7 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
+    padding-top: 6rem;
     padding-bottom: 0;
   }
 
@@ -1965,6 +1976,7 @@ body {
   }
 
   &-text {
+    margin-bottom: 4.8rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 75rem;
@@ -1976,10 +1988,10 @@ body {
   }
 
   &-img {
-    margin-bottom: 10.5rem;
+    margin-bottom: 7rem;
     width: 100%;
     min-width: 0;
-    max-width: 107.7rem;
+    max-width: 108rem;
 
     //TABLET
     @include respond(desktop-md) {
@@ -2032,7 +2044,7 @@ body {
 
       &-title {
         // margin-bottom: 2.1rem;
-        font-size: 2.7rem!important;
+        font-size: 2.4rem!important;
         // font-weight: 600;
         // line-height: 2;
         // color: #000000;
@@ -2072,6 +2084,7 @@ body {
   }
 
   &-text {
+    margin-bottom: 4.7rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 53rem;
@@ -2093,7 +2106,7 @@ body {
       &-img {
         width: 100%;
         min-width: 0;
-        max-width: 95rem;
+        max-width: 97rem;
 
         //TABLET 
         @include respond(desktop-md) {
@@ -2102,6 +2115,7 @@ body {
       }
 
       &-list {
+        margin-top: .7rem;
         margin-left: 4rem;
         list-style: none;
         width: 100%;
@@ -2146,7 +2160,7 @@ body {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 1.8rem 0;
+            padding: 1.6rem 0;
             width: 100%;
             max-width: 100%;
             font-size: 1.8rem;
@@ -2298,10 +2312,10 @@ body {
   }
 }
 .f-b-title {
-  margin-bottom: 3.3rem;
+  margin-bottom: 2.8rem;
   font-size: 5.1rem;
   font-weight: 700;
-  line-height: 1.29;
+  line-height: 1.2;
   letter-spacing: -1.28px;
   color: #000000;
 
@@ -2326,7 +2340,6 @@ body {
   }
 }
 .f-b-text {
-  margin-bottom: 5rem;
   font-size: 1.9rem;
   font-weight: 500;
   line-height: 1.53;
@@ -2334,7 +2347,6 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
-    margin-bottom: 4rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 40rem;
@@ -2344,7 +2356,6 @@ body {
 
   //MOBILE
   @include respond(desktop-xsm) {
-    margin-bottom: 4.5rem;
     max-width: 27rem;
     max-width: 44rem;
     font-size: 1.5rem;
