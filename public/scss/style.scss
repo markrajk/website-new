@@ -1568,8 +1568,8 @@ body {
 // FEATURE HERO SECTION
 //=====================================
 .main-features .section-hero {
-  padding-top: 10.6rem;
-  padding-bottom: 9rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: $green-primary;
   color: #ffffff;
   text-align: center;
@@ -1577,7 +1577,7 @@ body {
   //TABLET
   @include respond(desktop-md) {
     padding-top: 9.5rem;
-    padding-bottom: 8rem;
+    padding-bottom: 9.5rem;
   }
 
   //MOBILE
@@ -1683,19 +1683,19 @@ body {
 // FEATURE DOUBLE CARD SECTION
 //=====================================
 .section-feature-double {
-  padding-top: 8.4rem;
-  padding-bottom: 8.4rem;
+  padding-top: 8.5rem;
+  padding-bottom: 7rem;
   text-align: center;
 
   //TABLET
   @include respond(desktop-md) {
     padding-top: 8rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 6rem;
   }
 
   //MOBILE
   @include respond(desktop-xsm) {
-    padding-top: 5rem;
+    padding-top: 4.5rem;
     padding-bottom: 4.5rem;
   }
   
@@ -1764,7 +1764,6 @@ body {
 
       //TABLET 
       @include respond(desktop-md) {
-        padding-top: 3rem;
         padding-left: 0;
         padding-right: 0;
       }
@@ -1821,6 +1820,7 @@ body {
 
         //MOBILE
         @include respond(desktop-xsm) {
+          margin-top: 4.5rem;
           margin-bottom: 4.5rem;
         }
       }
@@ -1830,7 +1830,13 @@ body {
 
         //TABLET 
         @include respond(desktop-md) {
+          margin-top: 6rem;
           padding-left: 0;
+        }
+
+        //MOBILE
+        @include respond(desktop-xsm) {
+          margin-top: 4.5rem;
         }
       }
     }
@@ -1841,27 +1847,30 @@ body {
 // FEATURE SINGLE CARD SECTION
 //=====================================
 .section-feature-single {
-  padding-bottom: 11.7rem;
+  padding-bottom: 8.5rem;
   text-align: center;
 
   //TABLET
   @include respond(desktop-md) {
+    padding-top: 6rem;
     padding-bottom: 6rem;
   }
 
   //MOBILE
   @include respond(desktop-xsm) {
+    padding-top: 4.5rem;
     padding-bottom: 4.5rem;
   }
 
   &-img {
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     width: 100%;
     min-width: 0;
     max-width: 84rem;
 
     //TABLET
     @include respond(desktop-md) {
+      margin-bottom: 4rem;
       max-width: 67rem;
     }
 
@@ -1902,14 +1911,30 @@ body {
       }
     }
   }
+
+  &.card-02 {
+    & .section-feature-single-img {
+      
+      //TABLET
+      @include respond(desktop-md) {
+        max-width: 57.5rem;
+      }
+    }
+  }
+
+  &.card-02 {
+    & .section-feature-single-img {
+      max-width: 56.5rem;
+    }
+  }
 }
 
 //=====================================
 // FEATURE DEVELOPING TEAMS SECTION
 //=====================================
 .section-feature-teams {
-  padding-top: 10rem;
-  padding-bottom: 9.6rem;
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
   text-align: center;
 
   //TABLET
@@ -1959,7 +1984,7 @@ body {
     //TABLET
     @include respond(desktop-md) {
       margin-bottom: 0;
-      max-width: 67.9rem;
+      max-width: 62rem;
     }
 
     //MOBILE
@@ -1990,16 +2015,13 @@ body {
         width: 100%;
         max-width: 55rem;
         padding-top: 4rem;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-
-        &:not(:last-of-type) {
-          border-bottom: solid 2px #eaeaea;
-        }
+        border-bottom: solid 2px #eaeaea;
       }
 
       //MOBILE
@@ -2032,13 +2054,13 @@ body {
 // FEATURES DASHBOARD SECTION
 //=====================================
 .main-features .section-dashboard {
-  margin-top: 10rem;
-  margin-bottom: 12.7rem;
+  margin-top: 8.5rem;
+  margin-bottom: 8.5rem;
   text-align: center;
 
   //TABLET 
   @include respond(desktop-md) {
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-bottom: 6rem;
   }
 
@@ -2166,12 +2188,12 @@ body {
 // FEATURES PDF SECTION
 //=====================================
 .section-pdf {
-  margin-top: 10rem;
+  margin-top: 8.5rem;
   text-align: center;
 
   //TABLET
   @include respond(desktop-md) {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 
   &-title.f-b-title {
@@ -2304,7 +2326,7 @@ body {
   }
 }
 .f-b-text {
-  margin-bottom: 7.5rem;
+  margin-bottom: 5rem;
   font-size: 1.9rem;
   font-weight: 500;
   line-height: 1.53;
@@ -2312,7 +2334,7 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 40rem;
@@ -2712,7 +2734,10 @@ body {
         //TABLET
         @include respond(desktop-md) {
           margin-bottom: 1.1rem;
-          font-size: 1.7rem;
+        }
+
+        @include respond(desktop-sm) {
+          font-size: 1.6rem;
         }
       }
 
