@@ -926,15 +926,12 @@ body {
         text-decoration: underline; }
     .section-banner-main-content.left {
       max-width: 41.4rem; }
-      @media (max-width: 991px) {
-        .section-banner-main-content.left {
-          text-align: center;
-          max-width: 100%; } }
     .section-banner-main-content.right {
       max-width: 32.6rem; }
       @media (max-width: 991px) {
         .section-banner-main-content.right {
-          max-width: 18.1rem; } }
+          text-align: center;
+          max-width: 100%; } }
 
 .section-banner-mobile {
   display: none;

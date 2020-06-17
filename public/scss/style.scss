@@ -1492,20 +1492,15 @@ body {
 
       &.left {
         max-width: 41.4rem;
-
-        //TABLET
-        @include respond(desktop-md) {
-          text-align: center;
-          max-width: 100%;
-        }
       }
 
       &.right {
         max-width: 32.6rem;
 
-        //TABLET
-        @include respond(desktop-md) {
-          max-width: 18.1rem;
+         //TABLET
+         @include respond(desktop-md) {
+          text-align: center;
+          max-width: 100%;
         }
       }
     }
