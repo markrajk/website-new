@@ -144,7 +144,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#giving-feedback"]');
+      subheaderItem = document.querySelector('[href="#giving-feedback"] p');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -160,7 +160,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#receiving-feedback"]');
+      subheaderItem = document.querySelector('[href="#receiving-feedback"] p');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -177,7 +177,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#developing-teams"]');
+      subheaderItem = document.querySelector('[href="#developing-teams"] p');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -194,7 +194,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#the-dashboard"]');
+      subheaderItem = document.querySelector('[href="#the-dashboard"] p');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -207,7 +207,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#pdf-reports"]');
+      subheaderItem = document.querySelector('[href="#pdf-reports"] p');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
