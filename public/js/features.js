@@ -107,6 +107,8 @@ var receiveFeedbackCard = document.getElementById('receiving-feedback');
 var developingTeamsCard = document.getElementById('developing-teams');
 var theDashboardCard = document.getElementById('the-dashboard');
 var pdfReportsCard = document.getElementById('pdf-reports');
+var databaseCard = document.getElementById('database');
+var getStartedCard = document.getElementById('get-started');
 
 var tocLinks = document.querySelectorAll('.table-of-content-item-link');
 
@@ -208,6 +210,34 @@ window.addEventListener('scroll', function () {
       }
 
       subheaderItem = document.querySelector('[href="#pdf-reports"] p');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
+    }
+
+    if (window.scrollY >= databaseCard.offsetTop - header.offsetHeight - 30) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+      }
+
+      subheaderItem = document.querySelector('[href="#database"] p');
+      subheaderItem.classList.add('active');
+
+      subheaderList.scrollLeft =
+        subheaderItem.offsetLeft -
+        subheaderList.offsetWidth / 2 +
+        subheaderItem.offsetWidth / 2;
+    }
+
+    if (window.scrollY >= getStartedCard.offsetTop - header.offsetHeight - 30) {
+      for (var i = 0; i < tocLinks.length; i++) {
+        tocLinks[i].classList.remove('active');
+      }
+
+      subheaderItem = document.querySelector('[href="#get-started"] p');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =

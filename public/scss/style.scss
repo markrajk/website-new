@@ -2430,6 +2430,106 @@ body {
   }
 }
 
+//=====================================
+// FEATURES GET STARTED SECTION
+//=====================================
+.section-start {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  text-align: center;
+
+  &-main {
+    margin-top: 7rem;
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: 1fr;
+    grid-template-areas: "card1 card2 card3";
+    grid-gap: 7rem 4rem;
+
+    //TABLET
+    @include respond(desktop-md) {
+      grid-template-areas: "card1 card2"
+                           "card3 card3";
+    }
+
+    //TABLET
+    @include respond(desktop-sm) {
+      grid-template-areas: "card1"
+                           "card2"
+                           "card3";
+    }
+
+    &-card {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 35rem;
+      border-radius: 1rem;
+      border: solid 1px #dbdbdb;
+      background-color: #ffffff;
+
+      &-icon {
+        margin-bottom: 6rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 11.3rem;
+        height: 11.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #14c0ff;
+
+        &-symbol {
+          font-size: 5rem;
+          color: #FFF;
+        }
+      }
+
+      &-title {
+        padding: 0 2rem;
+        margin-bottom: 2.3rem;
+        font-size: 2.3rem;
+        font-weight: 600;
+        line-height: 1.26;
+        color: #080808;
+      }
+
+      &-text {
+        padding: 0 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 29rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.16px;
+        color: #2c2c2c;
+      }
+
+      &.card-01 {
+        grid-area: card1;
+      }
+      &.card-02 {
+        grid-area: card2;
+
+        & .section-start-main-card-icon-symbol {
+          font-size: 5rem;
+        }
+      }
+      &.card-03 {
+        grid-area: card3;
+
+        & .section-start-main-card-icon-symbol {
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+}
+
 
 //FEATURES MODIFIER CLASSES
 //-----------------------------
