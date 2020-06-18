@@ -79,6 +79,10 @@ body {
     font-weight: 700;
     color: #26292c;
     border: solid 3px #26292c; }
+  .btn-white {
+    color: #4ac623;
+    background-color: #FFF;
+    border-color: #FFF; }
 
 .dropdown {
   height: 100%;
@@ -427,11 +431,13 @@ body {
   padding-top: 8.4rem; }
 
 .main-features.main,
-.main-about-us.main {
+.main-about-us.main,
+.main-pricing {
   padding-top: 8.4rem; }
   @media (max-width: 991px) {
     .main-features.main,
-    .main-about-us.main {
+    .main-about-us.main,
+    .main-pricing {
       padding-top: 7rem; } }
 
 .main-overview .section-hero {
@@ -1001,6 +1007,16 @@ body {
         .section-banner-main-content.right {
           max-width: 100%; } }
 
+.main-pricing .section-banner .section-banner-main-content.right {
+  max-width: 100%;
+  text-align: center; }
+  .main-pricing .section-banner .section-banner-main-content.right p {
+    margin-bottom: 4rem; }
+  .main-pricing .section-banner .section-banner-main-content.right .btn {
+    padding: 1.8rem 4.9rem;
+    font-size: 1.5rem;
+    font-weight: 700; }
+
 .section-banner-mobile {
   display: none;
   padding-top: 5.5rem;
@@ -1542,6 +1558,114 @@ body {
       font-size: 1.4rem;
       color: #1c1c1c; } }
 
+.section-pricing {
+  margin-bottom: 9.3rem;
+  margin-top: 4.6rem; }
+  @media (max-width: 991px) {
+    .section-pricing {
+      padding: 0 7%; } }
+  @media (max-width: 769px) {
+    .section-pricing {
+      padding: 0; } }
+  .section-pricing-title {
+    margin-bottom: 3.2rem;
+    font-size: 4.1rem;
+    font-weight: 700;
+    letter-spacing: -0.47px;
+    text-align: center;
+    color: #1d1d1d; }
+  .section-pricing-main {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 4px solid #4ac623;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff; }
+    @media (max-width: 991px) {
+      .section-pricing-main {
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); } }
+    @media (max-width: 575px) {
+      .section-pricing-main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto); } }
+    .section-pricing-main-card {
+      padding: .5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      color: #1d1d1d;
+      border-right: 1px solid #EBEAEB; }
+      @media (max-width: 991px) {
+        .section-pricing-main-card {
+          padding-top: 2rem;
+          border-bottom: 1px solid #EBEAEB; } }
+      .section-pricing-main-card-title {
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: .6rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.36; }
+      .section-pricing-main-card-text {
+        margin-bottom: 2.1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.43; }
+      .section-pricing-main-card-price {
+        margin-bottom: 1.9rem;
+        font-size: 1.65rem;
+        font-weight: 400;
+        line-height: 0.77;
+        color: #9d9d9d; }
+        .section-pricing-main-card-price span {
+          margin-right: .5rem;
+          font-size: 26px;
+          font-weight: bold;
+          color: #1d1d1d; }
+      .section-pricing-main-card .btn-primary {
+        margin-bottom: 2.5rem;
+        width: 100%;
+        padding: 1.8rem 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.33;
+        letter-spacing: 0.3px; }
+        @media (max-width: 575px) {
+          .section-pricing-main-card .btn-primary {
+            margin-top: auto;
+            order: 6; } }
+      .section-pricing-main-card-subtitle {
+        margin-bottom: 2.2rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.43; }
+      .section-pricing-main-card-list {
+        margin-bottom: 2.6rem;
+        list-style: none; }
+        .section-pricing-main-card-list-item {
+          padding: .8rem 0;
+          display: flex;
+          align-items: center; }
+          .section-pricing-main-card-list-item-check {
+            margin-right: .9rem;
+            font-size: 1.1rem;
+            color: #4ac623; }
+          .section-pricing-main-card-list-item-text {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.43; }
+      .section-pricing-main-card-link {
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: auto;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.43;
+        color: #1264a3; }
+        .section-pricing-main-card-link:hover, .section-pricing-main-card-link:focus {
+          text-decoration: underline; }
+
 .main-about-us .section-hero {
   padding-top: 12rem;
   padding-bottom: 6rem;
@@ -1804,6 +1928,10 @@ body {
 
 .menu-open {
   transform: translate(0, 0) !important; }
+
+.invisible {
+  opacity: 0;
+  visibility: hidden; }
 
 .show-inline {
   display: inline; }

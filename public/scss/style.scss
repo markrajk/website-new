@@ -202,6 +202,12 @@ body {
     color: #26292c;
     border: solid 3px #26292c;
   }
+
+  &-white {
+    color: $green-primary;
+    background-color: #FFF;
+    border-color: #FFF;
+  }
 }
 
 
@@ -749,7 +755,8 @@ body {
 }
 
 .main-features.main,
-.main-about-us.main {
+.main-about-us.main,
+.main-pricing {
   padding-top: 8.4rem;
 
   @include respond(desktop-md) {
@@ -1597,6 +1604,30 @@ body {
         }
       }
     }
+  }
+}
+
+.main-pricing .section-banner {
+
+  & .section-banner-main-content.right {
+    max-width: 100%;
+    text-align: center;
+
+    & p {
+      margin-bottom: 4rem;
+    }
+
+    & .btn {
+      padding: 1.8rem 4.9rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    //  //TABLET
+    //  @include respond(desktop-md) {
+
+    //   max-width: 100%;
+    // }
   }
 }
 
@@ -2502,6 +2533,155 @@ body {
   }
 }
 
+// PRICING PAGE
+.section-pricing-wrapper {}
+.section-pricing {
+  margin-bottom: 9.3rem;
+  margin-top: 4.6rem;
+
+  @include respond(desktop-md) {
+    padding: 0 7%;
+  }
+
+  @include respond(desktop-sm) {
+    padding: 0;
+  }
+
+  &-title {
+    margin-bottom: 3.2rem;
+    font-size: 4.1rem;
+    font-weight: 700;
+    letter-spacing: -0.47px;
+    text-align: center;
+    color: #1d1d1d;
+  }
+  
+  &-main {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 4px solid $green-primary;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+
+    @include respond(desktop-md) {
+      padding: 0;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include respond(desktop-xsm) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
+
+    &-card {
+      padding: .5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      color: #1d1d1d;
+      border-right: 1px solid #EBEAEB;
+
+      @include respond(desktop-md) {
+        padding-top: 2rem;
+        border-bottom: 1px solid #EBEAEB;
+      }
+      
+
+      &-title {
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: .6rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.36;
+      }
+
+      &-text {
+        margin-bottom: 2.1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.43;
+      }
+
+      &-price {
+        margin-bottom: 1.9rem;
+        font-size: 1.65rem;
+        font-weight: 400;
+        line-height: 0.77;
+        color: #9d9d9d;
+
+        & span {
+          margin-right: .5rem;
+          font-size: 26px;
+          font-weight: bold;
+          color: #1d1d1d;
+        }
+      }
+
+      & .btn-primary {
+        margin-bottom: 2.5rem;
+        width: 100%;
+        padding: 1.8rem 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.33;
+        letter-spacing: 0.3px;
+
+        @include respond(desktop-xsm) {
+          margin-top: auto;
+          order: 6;
+        }
+      }
+
+      &-subtitle {
+        margin-bottom: 2.2rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.43;
+      }
+
+      &-list {
+        margin-bottom: 2.6rem;
+        list-style: none;
+
+        &-item {
+          padding: .8rem 0;
+          display: flex;
+          align-items: center;
+
+          &-check {
+            margin-right: .9rem;
+            font-size: 1.1rem;
+            color: $green-primary;
+          }
+
+          &-text {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.43;
+          }
+        }
+      }
+
+      &-link {
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: auto;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.43;
+        color: #1264a3;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
 // ====================================================================================================================================
 //                                                             ABOUT US PAGE
 // ====================================================================================================================================
@@ -2906,6 +3086,10 @@ body {
   transform: translate(0,0)!important;
 }
 
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .show-inline {
   display: inline;
