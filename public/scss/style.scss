@@ -1588,10 +1588,11 @@ body {
 
       &.right {
         max-width: 32.6rem;
+        text-align: center;
 
          //TABLET
          @include respond(desktop-md) {
-          text-align: center;
+
           max-width: 100%;
         }
       }
