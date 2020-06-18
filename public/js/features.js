@@ -71,7 +71,7 @@ function anchorLinkHandler(e) {
   var targetID = this.getAttribute('href');
   var targetAnchor = document.querySelector(targetID);
   if (!targetAnchor) return;
-  var originalTop = distanceToTop(targetAnchor) - header - subheader + 10;
+  var originalTop = distanceToTop(targetAnchor) - header - subheader + 50;
 
   window.scrollBy({
     top: originalTop,

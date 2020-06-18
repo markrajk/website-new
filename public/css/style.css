@@ -20,6 +20,7 @@ html {
 body {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
@@ -737,7 +738,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center; }
+    text-align: center;
+    text-decoration: none; }
     @media (max-width: 991px) {
       .main-features .table-of-content-item {
         width: 100%; } }
@@ -985,7 +987,7 @@ body {
       color: #ffffff; }
       @media (max-width: 991px) {
         .section-banner-main-content-link {
-          font-size: 2.6rem; } }
+          font-size: 2.8rem; } }
       .section-banner-main-content-link a {
         color: #FFF;
         font-weight: 700;
@@ -1307,13 +1309,13 @@ body {
             max-width: 41rem; } }
 
 .main-features .section-dashboard {
-  margin-top: 8.5rem;
-  margin-bottom: 8.5rem;
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
   text-align: center; }
   @media (max-width: 991px) {
     .main-features .section-dashboard {
-      margin-top: 8rem;
-      margin-bottom: 6rem; } }
+      padding-top: 8rem;
+      padding-bottom: 6rem; } }
   .main-features .section-dashboard-title {
     margin-left: auto;
     margin-right: auto; }
@@ -1325,7 +1327,8 @@ body {
   .main-features .section-dashboard-main {
     display: flex;
     align-items: flex-start;
-    justify-content: center; }
+    justify-content: space-between;
+    max-width: 128.7rem; }
     @media (max-width: 991px) {
       .main-features .section-dashboard-main {
         flex-direction: column;
@@ -1338,8 +1341,8 @@ body {
         .main-features .section-dashboard-main-body-img {
           max-width: 66.4rem; } }
     .main-features .section-dashboard-main-body-list {
+      margin-left: 1.2rem;
       margin-top: .7rem;
-      margin-left: 4rem;
       list-style: none;
       width: 100%;
       max-width: 25rem; }
@@ -1396,11 +1399,11 @@ body {
             color: #fff; }
 
 .section-pdf {
-  margin-top: 8.5rem;
+  padding-top: 8.5rem;
   text-align: center; }
   @media (max-width: 991px) {
     .section-pdf {
-      margin-top: 8rem; } }
+      padding-top: 8rem; } }
   @media (max-width: 991px) {
     .section-pdf-title.f-b-title {
       max-width: 50rem; } }
@@ -1758,22 +1761,22 @@ body {
       margin-left: auto;
       margin-right: auto; }
       .section-team-main-card-img {
-        margin-bottom: 2.75rem;
+        margin-bottom: 2.35rem;
         min-width: 0;
         width: 100%;
         max-width: 19.5rem; }
         @media (max-width: 991px) {
           .section-team-main-card-img {
-            margin-bottom: 2.2rem;
+            margin-bottom: 1.9rem;
             max-width: 18rem; } }
       .section-team-main-card-name {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
         font-size: 1.7rem;
         font-weight: 600;
         color: #000000; }
         @media (max-width: 991px) {
           .section-team-main-card-name {
-            margin-bottom: 1.1rem; } }
+            margin-bottom: .9rem; } }
         @media (max-width: 769px) {
           .section-team-main-card-name {
             font-size: 1.6rem; } }
