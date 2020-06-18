@@ -1414,61 +1414,84 @@ body {
             background-color: #4ac623;
             color: #fff; }
 
-.section-pdf {
+.section-pdf,
+.section-database {
   padding-top: 8.5rem;
   text-align: center; }
   @media (max-width: 991px) {
-    .section-pdf {
+    .section-pdf,
+    .section-database {
       padding-top: 8rem; } }
   @media (max-width: 991px) {
-    .section-pdf-title.f-b-title {
+    .section-pdf-title.f-b-title,
+    .section-database-title.f-b-title {
       max-width: 50rem; } }
   @media (max-width: 575px) {
-    .section-pdf-title.f-b-title {
+    .section-pdf-title.f-b-title,
+    .section-database-title.f-b-title {
       max-width: 33.2rem; } }
-  .section-pdf-text {
+  .section-pdf-text,
+  .section-database-text {
     margin-bottom: 8.5rem; }
     @media (max-width: 991px) {
-      .section-pdf-text {
+      .section-pdf-text,
+      .section-database-text {
         margin-bottom: 4.5rem; } }
-  .section-pdf-card {
+  .section-pdf-card,
+  .section-database-card {
     margin-bottom: 7.5rem;
     display: flex;
     align-items: center;
     justify-content: center; }
     @media (max-width: 991px) {
-      .section-pdf-card {
+      .section-pdf-card,
+      .section-database-card {
         flex-direction: column; } }
-    .section-pdf-card-img {
+    .section-pdf-card-img,
+    .section-database-card-img {
       width: 100%;
       min-width: 0;
       max-width: 56.5rem; }
       @media (max-width: 991px) {
-        .section-pdf-card-img {
+        .section-pdf-card-img,
+        .section-database-card-img {
           margin-bottom: 4rem;
           max-width: 41.8rem; } }
       @media (max-width: 575px) {
-        .section-pdf-card-img {
+        .section-pdf-card-img,
+        .section-database-card-img {
           max-width: 80%; } }
-    .section-pdf-card-main {
+    .section-pdf-card-main,
+    .section-database-card-main {
       margin-left: 7rem;
       text-align: left;
       max-width: 48.6rem; }
       @media (max-width: 991px) {
-        .section-pdf-card-main {
+        .section-pdf-card-main,
+        .section-database-card-main {
           margin-left: 0;
           text-align: center; } }
-    .section-pdf-card.card-02 {
+    .section-pdf-card.card-02,
+    .section-database-card.card-02 {
       margin-top: 7.5rem;
       flex-direction: row-reverse; }
       @media (max-width: 991px) {
-        .section-pdf-card.card-02 {
+        .section-pdf-card.card-02,
+        .section-database-card.card-02 {
           flex-direction: column; } }
-      .section-pdf-card.card-02 .section-pdf-card-main {
-        margin-left: 0;
+      .section-pdf-card.card-02 .section-pdf-card-main, .section-pdf-card.card-02 .section-database-card-main,
+      .section-database-card.card-02 .section-pdf-card-main,
+      .section-database-card.card-02 .section-database-card-main {
         margin-right: 7rem; }
+        .section-pdf-card.card-02 .section-pdf-card-main-text:not(:last-of-type), .section-pdf-card.card-02 .section-database-card-main-text:not(:last-of-type),
+        .section-database-card.card-02 .section-pdf-card-main-text:not(:last-of-type),
+        .section-database-card.card-02 .section-database-card-main-text:not(:last-of-type) {
+          margin-bottom: 2rem; }
         @media (max-width: 991px) {
-          .section-pdf-card.card-02 .section-pdf-card-main {
+          .section-pdf-card.card-02 .section-pdf-card-main, .section-pdf-card.card-02 .section-database-card-main,
+          .section-database-card.card-02 .section-pdf-card-main,
+          .section-database-card.card-02 .section-database-card-main {
+            margin-left: 0;
             margin-right: 0; } }
 
 .f-b-subtitle {
@@ -1535,7 +1558,7 @@ body {
   margin-bottom: 1.6rem;
   font-size: 2.6rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.3;
   color: #000000; }
   @media (max-width: 575px) {
     .f-s-title {
@@ -1552,6 +1575,8 @@ body {
   color: #2c2c2c; }
   @media (max-width: 991px) {
     .f-s-text {
+      margin-left: auto;
+      margin-right: auto;
       max-width: 44rem; } }
   @media (max-width: 575px) {
     .f-s-text {
