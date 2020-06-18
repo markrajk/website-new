@@ -1574,6 +1574,12 @@ body {
     letter-spacing: -0.47px;
     text-align: center;
     color: #1d1d1d; }
+    @media (max-width: 991px) {
+      .section-pricing-title {
+        font-size: 3.6rem; } }
+    @media (max-width: 575px) {
+      .section-pricing-title {
+        font-size: 3rem; } }
   .section-pricing-main {
     padding: 1.5rem 0;
     display: grid;

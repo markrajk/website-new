@@ -2554,6 +2554,14 @@ body {
     letter-spacing: -0.47px;
     text-align: center;
     color: #1d1d1d;
+
+    @include respond(desktop-md) {
+      font-size: 3.6rem;
+    }
+
+    @include respond(desktop-xsm) {
+      font-size: 3rem;
+    }
   }
   
   &-main {
