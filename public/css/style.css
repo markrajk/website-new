@@ -147,7 +147,7 @@ body {
   width: 100%;
   border-bottom: 2px solid #F3F3F3; }
 
-@media (max-width: 991px) {
+@media (max-width: 575px) {
   .card-section-divider {
     display: none; } }
 @media (max-width: 575px) {
@@ -427,14 +427,13 @@ body {
           font-size: 1.05rem;
           text-align: center; } }
 
-.main-overview.main {
-  padding-top: 8.4rem; }
-
+.main-overview.main,
 .main-features.main,
 .main-about-us.main,
 .main-pricing {
   padding-top: 8.4rem; }
   @media (max-width: 991px) {
+    .main-overview.main,
     .main-features.main,
     .main-about-us.main,
     .main-pricing {
@@ -450,14 +449,15 @@ body {
     .main-overview .section-hero {
       padding-top: 7rem;
       padding-bottom: 5.2rem;
+      flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
       text-align: center; } }
   @media (max-width: 575px) {
     .main-overview .section-hero {
       flex-direction: column;
-      padding-top: 5.5rem;
-      padding-bottom: 3.5rem; } }
+      padding-top: 5rem;
+      padding-bottom: 6rem; } }
   .main-overview .section-hero-main {
     margin-right: 2rem; }
     @media (max-width: 991px) {
@@ -497,8 +497,8 @@ body {
           margin-bottom: 2rem;
           max-width: 30rem;
           max-width: 100%;
-          font-size: 2.9rem;
-          line-height: 1.21;
+          font-size: 2.8rem;
+          line-height: 1.25;
           letter-spacing: normal;
           color: #1c1c1c; } }
     .main-overview .section-hero-main-text {
@@ -518,13 +518,13 @@ body {
           line-height: 1.53; } }
       @media (max-width: 575px) {
         .main-overview .section-hero-main-text {
-          margin-bottom: 1.6rem;
+          margin-bottom: 2rem;
           margin-left: auto;
           margin-right: auto;
           max-width: 32.6rem;
           max-width: 90%;
           font-size: 1.5rem;
-          line-height: 1.47;
+          line-height: 1.6;
           letter-spacing: 0.15px; } }
     .main-overview .section-hero-main-buttons {
       margin-bottom: 2.7rem; }
@@ -546,6 +546,7 @@ body {
         @media (max-width: 575px) {
           .main-overview .section-hero-main-buttons .btn-primary {
             margin-right: 0;
+            font-weight: 500;
             width: 90%;
             padding: 1.15rem 3.4rem;
             font-size: 1.6rem; } }
@@ -565,7 +566,8 @@ body {
     max-width: 58.1rem; }
     @media (max-width: 991px) {
       .main-overview .section-hero-img {
-        display: none; } }
+        margin-bottom: 6rem;
+        max-width: 45.7rem; } }
     @media (max-width: 575px) {
       .main-overview .section-hero-img {
         margin-bottom: 3rem;
@@ -670,7 +672,7 @@ body {
     @media (max-width: 769px) {
       .main-overview .table-of-content-link {
         font-size: 1.3rem; } }
-    @media (max-width: 450px) {
+    @media (max-width: 530px) {
       .main-overview .table-of-content-link span {
         display: none; } }
     @media (max-width: 630px) {
@@ -695,8 +697,8 @@ body {
         font-size: 1.55rem; } }
     @media (max-width: 991px) {
       .main-overview .table-of-content .btn {
-        font-size: 1.5rem;
-        padding: 1.35rem 1.85rem; } }
+        font-size: 1.6rem;
+        padding: 1.35rem 3.5rem; } }
     @media (max-width: 900px) {
       .main-overview .table-of-content .btn {
         height: 4rem;
@@ -783,8 +785,9 @@ body {
   justify-content: center; }
   @media (max-width: 991px) {
     .section-info-card {
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem; } }
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      flex-direction: column; } }
   @media (max-width: 575px) {
     .section-info-card {
       flex-direction: column;
@@ -795,18 +798,20 @@ body {
     max-width: 33rem; }
     @media (max-width: 991px) {
       .section-info-card-img, .section-info-card-video {
-        max-width: 25rem; } }
+        margin-bottom: 3.5rem;
+        max-width: 28.6rem; } }
     @media (max-width: 575px) {
       .section-info-card-img, .section-info-card-video {
-        margin-bottom: 4rem;
-        max-width: 52.3%; } }
+        margin-bottom: 2.68rem;
+        max-width: 68.8%; } }
   .section-info-card-main {
     margin-left: 8rem;
     max-width: 54.6rem; }
     @media (max-width: 991px) {
       .section-info-card-main {
-        margin-left: 4rem;
-        max-width: 30rem; } }
+        margin-left: 0;
+        max-width: 61.2rem;
+        text-align: center; } }
     @media (max-width: 575px) {
       .section-info-card-main {
         margin-left: 0;
@@ -819,14 +824,14 @@ body {
       color: #1c1c1c; }
       @media (max-width: 991px) {
         .section-info-card-main-title {
-          margin-bottom: 2.8rem;
+          margin-bottom: 2.2rem;
           font-size: 2.6rem;
-          line-height: 1.31; } }
+          line-height: 1.46; } }
       @media (max-width: 575px) {
         .section-info-card-main-title {
-          margin-bottom: 1.8rem;
-          font-size: 1.9rem;
-          line-height: 1.58;
+          margin-bottom: 1.6rem;
+          font-size: 2rem;
+          line-height: 1.5;
           color: #000000; } }
     .section-info-card-main-text {
       margin-bottom: 3.5rem;
@@ -836,15 +841,15 @@ body {
       color: #1c1c1c; }
       @media (max-width: 991px) {
         .section-info-card-main-text {
-          margin-bottom: 3.6rem;
-          font-size: 1.5rem;
-          line-height: 1.53; } }
+          margin-bottom: 0;
+          font-size: 1.6rem;
+          line-height: 1.56; } }
       @media (max-width: 575px) {
         .section-info-card-main-text {
           margin-left: auto;
           margin-right: auto;
-          margin-bottom: 1.8rem;
-          max-width: 81.1%;
+          margin-bottom: 0;
+          max-width: 76%;
           font-size: 1.4rem;
           line-height: 1.57; } }
     .section-info-card-main-buttons {
@@ -866,7 +871,8 @@ body {
     flex-direction: row-reverse; }
     @media (max-width: 991px) {
       .section-info-card.reversed {
-        margin-right: 0; } }
+        margin-right: 0;
+        flex-direction: column; } }
     @media (max-width: 575px) {
       .section-info-card.reversed {
         flex-direction: column; } }
@@ -875,7 +881,7 @@ body {
       margin-right: 8rem; }
       @media (max-width: 991px) {
         .section-info-card.reversed .section-info-card-main {
-          margin-right: 4rem; } }
+          margin-right: 0; } }
       @media (max-width: 575px) {
         .section-info-card.reversed .section-info-card-main {
           margin-right: 0; } }
@@ -892,27 +898,26 @@ body {
   text-align: center; }
   @media (max-width: 991px) {
     .main-overview .section-dashboard {
-      padding-top: 4rem;
-      padding-bottom: 7rem; } }
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
   @media (max-width: 575px) {
     .main-overview .section-dashboard {
-      padding-top: 3.5rem;
-      padding-bottom: 4.37rem; } }
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
   .main-overview .section-dashboard-img {
     width: 100%;
     min-width: 0;
     max-width: 102.4rem; }
     @media (max-width: 991px) {
       .main-overview .section-dashboard-img {
-        margin-bottom: 0;
-        margin-top: 2.8rem;
-        order: 2;
-        max-width: 64.4rem; } }
+        margin-bottom: 3.5rem;
+        margin-top: 0rem;
+        order: -1;
+        max-width: 61.2rem; } }
     @media (max-width: 575px) {
       .main-overview .section-dashboard-img {
         margin-bottom: 4rem;
         margin-top: 0;
-        order: 0;
         max-width: 99%; } }
   .main-overview .section-dashboard-main-title {
     margin-bottom: 2rem;
@@ -924,14 +929,14 @@ body {
     color: #1c1c1c; }
     @media (max-width: 991px) {
       .main-overview .section-dashboard-main-title {
-        margin-bottom: 1.4rem;
-        font-size: 2.9rem;
-        line-height: 1.31;
-        max-width: 37rem; } }
+        margin-bottom: 2.2rem;
+        font-size: 2.6rem;
+        line-height: 1.46;
+        max-width: 100%; } }
     @media (max-width: 575px) {
       .main-overview .section-dashboard-main-title {
         margin-bottom: 1.8rem;
-        font-size: 1.9rem;
+        font-size: 2rem;
         line-height: 1.58;
         color: #000000; } }
   .main-overview .section-dashboard-main-text {
@@ -945,13 +950,14 @@ body {
     color: #1c1c1c; }
     @media (max-width: 991px) {
       .main-overview .section-dashboard-main-text {
-        max-width: 52rem;
-        margin-bottom: 2.6rem;
-        font-size: 1.4rem;
-        line-height: 1.71; } }
+        max-width: 61.2rem;
+        margin-bottom: 0;
+        font-size: 1.6rem;
+        line-height: 1.56; } }
     @media (max-width: 575px) {
       .main-overview .section-dashboard-main-text {
-        max-width: 81.1%;
+        font-size: 1.4rem;
+        max-width: 76%;
         line-height: 1.58; } }
   .main-overview .section-dashboard-main-buttons .btn {
     padding: 1.4rem 2.1rem;
