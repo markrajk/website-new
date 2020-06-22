@@ -2479,6 +2479,16 @@ body {
       }
     }
 
+    &.card-01 {
+      & .section-pdf-card-main,
+      & .section-database-card-main {
+
+        &-text:not(:last-of-type) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
     &.card-02 {
       margin-top: 7.5rem;
       flex-direction: row-reverse;

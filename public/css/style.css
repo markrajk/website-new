@@ -1465,6 +1465,10 @@ body {
         .section-database-card-main {
           margin-left: 0;
           text-align: center; } }
+    .section-pdf-card.card-01 .section-pdf-card-main-text:not(:last-of-type), .section-pdf-card.card-01 .section-database-card-main-text:not(:last-of-type),
+    .section-database-card.card-01 .section-pdf-card-main-text:not(:last-of-type),
+    .section-database-card.card-01 .section-database-card-main-text:not(:last-of-type) {
+      margin-bottom: 2rem; }
     .section-pdf-card.card-02,
     .section-database-card.card-02 {
       margin-top: 7.5rem;
