@@ -627,7 +627,7 @@ body {
   position: sticky;
   top: 0;
   transition: all .25s ease-in-out;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 35%, #FFF 35%); }
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFF 0%); }
 
 .main-overview .table-of-content {
   transform: translate(0, 0);
