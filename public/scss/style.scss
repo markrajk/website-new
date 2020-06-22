@@ -1025,7 +1025,7 @@ body {
   position: sticky;
   top: 0;
   transition: all .25s ease-in-out;
-  background: linear-gradient(0deg, transparent, #FFF 80%);
+  background: linear-gradient(0deg, rgba(255,255,255,0) 70%, #FFF 70%);
 }
 .main-overview .table-of-content {
   transform: translate(0, 0);
@@ -1551,6 +1551,7 @@ body {
       font-size: 1.8rem;
       font-weight: 400;
       color: #1c1c1c;
+      line-height: 1.56;
     }
 
     & .btn-primary {
