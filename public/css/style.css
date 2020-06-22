@@ -1337,8 +1337,8 @@ body {
     max-width: 53rem; }
   .main-features .section-dashboard-main {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     max-width: 128.7rem; }
     @media (max-width: 991px) {
       .main-features .section-dashboard-main {
@@ -1352,11 +1352,10 @@ body {
         .main-features .section-dashboard-main-body-img {
           max-width: 66.4rem; } }
     .main-features .section-dashboard-main-body-list {
-      margin-left: 1.2rem;
-      margin-top: .7rem;
+      margin-left: 4.7%;
       list-style: none;
       width: 100%;
-      max-width: 25rem; }
+      max-width: 20rem; }
       @media (max-width: 991px) {
         .main-features .section-dashboard-main-body-list {
           margin-top: 3rem;
@@ -1384,10 +1383,10 @@ body {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 1.6rem 0;
+          padding: 1.4rem 0;
           width: 100%;
           max-width: 100%;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           font-weight: 600;
           letter-spacing: 0.27px;
           color: #4ac623;
