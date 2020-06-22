@@ -1042,11 +1042,11 @@ body {
   background-color: #ffffff;
 
   &-link {
-    // width: 100%;
-    // max-width: 23rem;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    width: 100%;
+    max-width: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 4.8rem;
     font-size: 1.6rem;
     font-weight: 700;
@@ -1088,7 +1088,8 @@ body {
     }
 
     &:not(:last-of-type) {
-      padding: 1.4rem 3rem;
+      // padding: 1.4rem 3rem;
+      padding: 0 .6rem;
     }
     
     &.active {
@@ -1101,7 +1102,7 @@ body {
 
   & .btn {
     height: 4.8rem;
-    padding: 1.35rem 3rem;
+    padding: 1.35rem 2rem;
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.16px;
@@ -1311,7 +1312,7 @@ body {
         margin-bottom: 3.5rem;
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 1.67;
+        line-height: 1.56;
         color: #1c1c1c;
 
         //TABLET
@@ -1474,7 +1475,7 @@ body {
       max-width: 75.8rem;
       font-size: 1.8rem;
       font-weight: 400;
-      line-height: 1.67;
+      line-height: 1.56;
       color: #1c1c1c;
 
       //TABLET

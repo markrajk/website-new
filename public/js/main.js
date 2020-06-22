@@ -102,10 +102,10 @@ var tableOfContent = document.querySelector('.table-of-content-wrapper');
 var tableOfContentPos = document.querySelector('.activate-toc');
 var hideToc = document.getElementById('hide-toc');
 
-var giveFeedbackCard = document.getElementById('give-feedback');
-var receiveFeedbackCard = document.getElementById('receive-feedback');
-var developingTeamsCard = document.getElementById('developing-teams');
-var theDashboardCard = document.getElementById('the-dashboard');
+var section01Card = document.getElementById('section-01');
+var section02Card = document.getElementById('section-02');
+var section03Card = document.getElementById('section-03');
+var section04Card = document.getElementById('section-04');
 
 var tocLinks = document.querySelectorAll('.table-of-content-link');
 
@@ -128,50 +128,30 @@ window.addEventListener('scroll', function () {
   if (window.scrollY >= tableOfContentPos.offsetTop - 60) {
     header.style.top = '-8.4rem';
     header.style.transitionDuration = `${2 / Math.abs(checkScrollSpeed())}s`;
-    if (
-      window.scrollY >=
-      giveFeedbackCard.offsetTop - header.offsetHeight - 30
-    ) {
+    if (window.scrollY >= section01Card.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#give-feedback"]')
-          .classList.add('active');
+        document.querySelector('[href="#section-01"]').classList.add('active');
       }
     }
-    if (
-      window.scrollY >=
-      receiveFeedbackCard.offsetTop - header.offsetHeight - 30
-    ) {
+    if (window.scrollY >= section02Card.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#receive-feedback"]')
-          .classList.add('active');
+        document.querySelector('[href="#section-02"]').classList.add('active');
       }
     }
 
-    if (
-      window.scrollY >=
-      developingTeamsCard.offsetTop - header.offsetHeight - 30
-    ) {
+    if (window.scrollY >= section03Card.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#developing-teams"]')
-          .classList.add('active');
+        document.querySelector('[href="#section-03"]').classList.add('active');
       }
     }
 
-    if (
-      window.scrollY >=
-      theDashboardCard.offsetTop - header.offsetHeight - 30
-    ) {
+    if (window.scrollY >= section04Card.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
-        document
-          .querySelector('[href="#the-dashboard"]')
-          .classList.add('active');
+        document.querySelector('[href="#section-04"]').classList.add('active');
       }
     }
     if (window.scrollY >= hideToc.offsetTop - 150) {
