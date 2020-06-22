@@ -1197,123 +1197,52 @@ body {
         .main-features .section-hero-info-icon {
           font-size: 2.6rem; } }
 
-.section-feature-double {
-  padding-top: 8.5rem;
-  padding-bottom: 8.5rem;
+.section-heading {
   text-align: center; }
-  @media (max-width: 991px) {
-    .section-feature-double {
-      padding-top: 6rem;
-      padding-bottom: 6rem; } }
-  @media (max-width: 575px) {
-    .section-feature-double {
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem; } }
-  .section-feature-double-text {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 7rem;
-    max-width: 84rem; }
-    @media (max-width: 991px) {
-      .section-feature-double-text {
-        margin-bottom: 4rem; } }
-  .section-feature-double-body {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    @media (max-width: 991px) {
-      .section-feature-double-body {
-        flex-direction: column; } }
-    .section-feature-double-body-card {
-      padding-top: 1.8rem;
-      padding-bottom: 3rem; }
-      @media (max-width: 991px) {
-        .section-feature-double-body-card {
-          padding: 0; } }
-      .section-feature-double-body-card-img {
-        margin-bottom: 4rem;
-        width: 100%;
-        min-width: 0;
-        max-width: 28.4rem; }
-        @media (max-width: 575px) {
-          .section-feature-double-body-card-img {
-            margin-bottom: 3rem;
-            max-width: 19.3rem; } }
-      .section-feature-double-body-card-main-text {
-        max-width: 44rem; }
-      .section-feature-double-body-card.card-01 {
-        padding-right: 8.45rem;
-        border-right: 1.5px solid #f1f1f1; }
-        @media (max-width: 991px) {
-          .section-feature-double-body-card.card-01 {
-            margin-bottom: 6rem;
-            padding-right: 0;
-            border-right: 0; } }
-        @media (max-width: 575px) {
-          .section-feature-double-body-card.card-01 {
-            margin-top: 4.5rem;
-            margin-bottom: 4.5rem; } }
-      .section-feature-double-body-card.card-02 {
-        padding-left: 8.45rem; }
-        @media (max-width: 991px) {
-          .section-feature-double-body-card.card-02 {
-            margin-top: 6rem;
-            padding-left: 0; } }
-        @media (max-width: 575px) {
-          .section-feature-double-body-card.card-02 {
-            margin-top: 4.5rem; } }
+  .section-heading.heading-01 {
+    padding-top: 6.3rem; }
+  .section-heading.heading-02 {
+    padding-top: 10rem; }
+    .section-heading.heading-02 .section-heading-text {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70.8rem; }
 
-.section-feature-single {
-  padding-bottom: 8.5rem;
-  text-align: center; }
-  @media (max-width: 991px) {
-    .section-feature-single {
-      padding-top: 6rem;
-      padding-bottom: 6rem; } }
-  @media (max-width: 575px) {
-    .section-feature-single {
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem; } }
-  .section-feature-single-img {
-    margin-bottom: 7rem;
-    width: 100%;
-    min-width: 0;
-    max-width: 84rem; }
-    @media (max-width: 991px) {
-      .section-feature-single-img {
-        margin-bottom: 4rem;
-        max-width: 67rem; } }
-    @media (max-width: 575px) {
-      .section-feature-single-img {
-        margin-bottom: 3.5rem; } }
-  .section-feature-single-main-title {
-    margin-bottom: 1.8rem;
-    font-size: 2.6rem;
-    font-weight: 600;
-    line-height: 1;
-    color: #000000; }
-    @media (max-width: 991px) {
-      .section-feature-single-main-title {
-        font-size: 2.6rem; } }
-  .section-feature-single-main-text {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 73rem;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.56;
-    letter-spacing: 0.16px;
-    color: #2c2c2c; }
-    @media (max-width: 991px) {
-      .section-feature-single-main-text {
-        max-width: 55rem; } }
-  .section-feature-single.card-01 .section-feature-single-img {
-    max-width: 80rem; }
-    @media (max-width: 991px) {
-      .section-feature-single.card-01 .section-feature-single-img {
-        max-width: 57.5rem; } }
-  .section-feature-single.card-02 .section-feature-single-img {
-    max-width: 58.5rem; }
+.section-feature-card {
+  padding-top: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .section-feature-card-main {
+    margin-left: 9rem; }
+    .section-feature-card-main-title {
+      margin-bottom: 3rem;
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: #000000; }
+    .section-feature-card-main-text {
+      margin-bottom: 3rem;
+      max-width: 46.7rem;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.53;
+      letter-spacing: 0.17px;
+      color: #505050; }
+    .section-feature-card-main-link {
+      font-size: 1.7rem;
+      font-weight: 500;
+      letter-spacing: 0.17px;
+      color: #1f98ff;
+      text-decoration: none; }
+      .section-feature-card-main-link:hover, .section-feature-card-main-link:focus {
+        text-decoration: underline; }
+  .section-feature-card.reversed {
+    flex-direction: row-reverse; }
+    .section-feature-card.reversed .section-feature-card-main {
+      margin-left: 0;
+      margin-right: 9rem; }
+  .section-feature-card.card-03, .section-feature-card.card-05 {
+    padding-bottom: 9rem; }
 
 .section-feature-teams {
   padding-top: 8.5rem;
@@ -1628,10 +1557,10 @@ body {
           font-size: 6rem; }
 
 .f-b-subtitle {
-  margin-bottom: 1.8rem;
-  font-size: 2.3rem;
+  margin-bottom: 1.4rem;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 1.26;
+  letter-spacing: -0.2px;
   color: #080808; }
   @media (max-width: 991px) {
     .f-b-subtitle {
@@ -1645,11 +1574,11 @@ body {
       line-height: 1.53; } }
 
 .f-b-title {
-  margin-bottom: 2.8rem;
-  font-size: 5.1rem;
+  margin-bottom: 2.7rem;
+  font-size: 4.8rem;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -1.28px;
+  letter-spacing: -1.2px;
   color: #000000; }
   @media (max-width: 991px) {
     .f-b-title {
@@ -1669,9 +1598,9 @@ body {
       letter-spacing: -0.88px; } }
 
 .f-b-text {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 1.53;
+  line-height: 1.67;
   color: #5f5f5f; }
   @media (max-width: 991px) {
     .f-b-text {
