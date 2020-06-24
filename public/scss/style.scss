@@ -207,6 +207,13 @@ body {
     color: $green-primary;
     background-color: #FFF;
     border-color: #FFF;
+
+    &-outlined {
+      font-weight: 500;
+      color: #FFF;
+      border: 2.5px solid #FFF;
+      background-color: transparent;
+    }
   }
 }
 
@@ -769,7 +776,7 @@ body {
   //TABLET
   @include respond(desktop-md) {
     padding-top: 7rem;
-    padding-bottom: 5.2rem;
+    padding-bottom: 5rem;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -955,13 +962,13 @@ body {
 //=====================================
 .section-video {
   padding-top: 6rem;
-  padding-bottom: 6.4rem;
+  padding-bottom: 5rem;
   text-align: center;
 
   //TABLET
   @include respond(desktop-md) {
-    padding-top: 5.5rem;
-    padding-bottom: 1.8rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
   }
 
   //MOBILE
@@ -1256,6 +1263,8 @@ body {
 
     &-img,
     &-video {
+      box-shadow: none !important;
+      border: 0!important;
       width: 100%;
       min-width: 0;
       max-width: 33rem;
@@ -1638,10 +1647,10 @@ body {
     padding-bottom: 6.9rem;
   }
 
-  //MOBILE
-  @include respond(desktop-xsm) {
-    display: none;
-  }
+  // //MOBILE
+  // @include respond(desktop-xsm) {
+  //   display: none;
+  // }
 
   &.green {
     background-color: $green-primary;
@@ -1655,14 +1664,45 @@ body {
     text-align: center;
 
     &-big {
-      margin-bottom: 5rem;
-      font-size: 3.6rem;
+      margin-bottom: 2.7rem;
+      font-size: 3.7rem;
       font-weight: 600;
+
+      //TABLET
+      @include respond(desktop-md) {
+        font-size: 3.3rem;
+      }
+
+      //TABLET
+      @include respond(desktop-xsm) {
+        font-size: 2.7rem;
+      }
     }
 
     &-small {
-      font-size: 2rem;
+      margin-bottom: 2.7rem;
+      font-size: 2.2rem;
       font-weight: 500;
+
+      //TABLET
+      @include respond(desktop-md) {
+        font-size: 2rem;
+      }
+
+      & a {
+        color: inherit;
+      }
+    }
+
+    &-info {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    & .btn {
+      margin-bottom: 3.4rem;
+      padding: 1.2rem 3.2rem;
+      font-size: 1.9rem;
     }
 
     &-content {
@@ -1733,9 +1773,9 @@ body {
   text-align: center;
   background-color: #FCFCFC;
 
-  @include respond(desktop-xsm) {
-    display: block;
-  }
+  // @include respond(desktop-xsm) {
+  //   display: block;
+  // }
 
   &-main {
 
@@ -2095,14 +2135,38 @@ body {
   &.heading-01 {
     padding-top: 6.3rem;
 
+    & .section-heading-text {
+      
+      // //TABLET
+      // @include respond(desktop-md) {
+      //   max-width: 40rem;
+      // }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        max-width: 27rem;
+      }
+    }
+
     //TABLET
     @include respond(desktop-md) {
       padding-top: 7rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
     }
   }
 
   &.heading-02 {
     padding-top: 10rem;
+
+    //TABLET
+    @include respond(desktop-md) {
+      padding-top: 7rem;
+    }
 
     & .section-heading-text {
       margin-left: auto;
@@ -2110,9 +2174,14 @@ body {
       max-width: 70.8rem;
 
       //TABLET
-    @include respond(desktop-md) {
-      max-width: 40rem;
-    }
+      @include respond(desktop-md) {
+        max-width: 63rem;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        max-width: 27rem;
+      }
     }
 
     //TABLET
@@ -2139,6 +2208,12 @@ body {
     text-align: center;
   }
 
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   &-video {
     min-width: 0;
     width: 100%;
@@ -2148,6 +2223,11 @@ body {
     @include respond(desktop-md) {
       margin-bottom: 3.5rem;
       max-width: 28.66rem;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      margin-bottom: 3rem;
     }
   }
 
@@ -2170,6 +2250,12 @@ body {
         margin-bottom: 1.8rem;
         font-size: 2.6rem;
       }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        margin-bottom: 1.6rem;
+        font-size: 2.2rem;
+      }
     }
 
     &-text {
@@ -2190,6 +2276,14 @@ body {
         line-height: 1.5;
         letter-spacing: 0.16px;
         color: #2c2c2c;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        max-width: 32rem;
+        font-size: 1.4rem;
+        line-height: 1.57;
+        letter-spacing: normal;
       }
     }
 
@@ -2252,7 +2346,7 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
-    padding-top: 6rem;
+    padding-top: 7rem;
     padding-bottom: 0;
   }
 
@@ -2262,7 +2356,7 @@ body {
   }
 
   &-text {
-    margin-bottom: 4.8rem;
+    margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 75rem;
@@ -2282,7 +2376,7 @@ body {
 
     //MOBILE
     @include respond(desktop-xsm) {
-      padding-top: 3.5rem;
+      padding-top: 3rem;
     }
   }
 
@@ -2319,8 +2413,8 @@ body {
 
       //MOBILE
       @include respond(desktop-xsm) {
-        padding-top: 4.5rem;
-        padding-bottom: 4.5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
       }
 
       &-title {
@@ -2346,6 +2440,11 @@ body {
         @include respond(desktop-md) {
           max-width: 41rem;
          }
+
+         //MOBILE
+      @include respond(desktop-xsm) {
+        max-width: 34.6rem!important;
+      }
       }
     }
   }
@@ -2363,6 +2462,12 @@ body {
   @include respond(desktop-md) {
     padding-top: 8rem;
     padding-bottom: 6rem;
+  }
+
+  //TABLET 
+  @include respond(desktop-xsm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   &-subtitle {}
@@ -2502,7 +2607,12 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
-    padding-top: 8rem;
+    padding-top: 7rem;
+  }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 5rem;
   }
 
   &-title.f-b-title {
@@ -2525,7 +2635,7 @@ body {
   }
 
   &-card {
-    margin-bottom: 7.5rem;
+    margin-bottom: 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2533,6 +2643,11 @@ body {
     //TABLET
     @include respond(desktop-md) {
       flex-direction: column;
+    }
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      margin-bottom: 5rem;
     }
 
     &-img {
@@ -2548,6 +2663,7 @@ body {
 
       //TABLET
       @include respond(desktop-xsm) {
+        margin-bottom: 3rem;
         max-width: 80%;
       }
     }
@@ -2585,6 +2701,11 @@ body {
       //TABLET
       @include respond(desktop-md) {
         flex-direction: column;
+      }
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        margin-top: 5rem;
       }
 
       & .section-pdf-card-main,
