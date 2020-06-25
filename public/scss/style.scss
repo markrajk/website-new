@@ -1675,13 +1675,19 @@ body {
 // BANNER SECTION
 //=====================================
 .section-banner {
-  padding-top: 9.5rem;
-  padding-bottom: 9.5rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 
   //TABLET
   @include respond(desktop-md) {
-    padding-top: 6.6rem;
-    padding-bottom: 6.9rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  //MOBILE
+  @include respond(desktop-xsm) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   &.green {
@@ -1732,9 +1738,14 @@ body {
     }
 
     & .btn {
-      margin-bottom: 3.4rem;
+      
       padding: 1.2rem 3.2rem;
       font-size: 1.9rem;
+
+      //MOBILE
+      @include respond(desktop-xsm) {
+        margin-bottom: 3.4rem;
+      }
     }
 
     &-content {

@@ -1064,12 +1064,16 @@ body {
     margin-right: 2rem; }
 
 .section-banner {
-  padding-top: 9.5rem;
-  padding-bottom: 9.5rem; }
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
   @media (max-width: 991px) {
     .section-banner {
-      padding-top: 6.6rem;
-      padding-bottom: 6.9rem; } }
+      padding-top: 8rem;
+      padding-bottom: 8rem; } }
+  @media (max-width: 575px) {
+    .section-banner {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
   .section-banner.green {
     background-color: #4ac623;
     color: #FFF; }
@@ -1098,9 +1102,11 @@ body {
       font-size: 1.5rem;
       font-weight: 500; }
     .section-banner-main .btn {
-      margin-bottom: 3.4rem;
       padding: 1.2rem 3.2rem;
       font-size: 1.9rem; }
+      @media (max-width: 575px) {
+        .section-banner-main .btn {
+          margin-bottom: 3.4rem; } }
     .section-banner-main-content-link {
       font-size: 3.6rem;
       font-weight: 600;
