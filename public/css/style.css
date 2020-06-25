@@ -701,7 +701,7 @@ body {
         display: none; } }
     .main-overview .table-of-content-link:not(:last-of-type) {
       padding: 0 .6rem; }
-    .main-overview .table-of-content-link:hover, .main-overview .table-of-content-link:focus {
+    .main-overview .table-of-content-link:hover {
       border-radius: 6px;
       background-color: rgba(74, 198, 35, 0.1); }
     .main-overview .table-of-content-link.active {
