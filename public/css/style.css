@@ -43,7 +43,8 @@ body {
   justify-content: center;
   border-radius: 3px;
   text-decoration: none;
-  white-space: nowrap; }
+  white-space: nowrap;
+  transition: all .2s ease-in-out; }
   .btn-link {
     font-size: 1.75rem;
     font-weight: 500;
@@ -67,18 +68,29 @@ body {
     background-color: #4ac623;
     border: solid 2px #4ac623;
     font-weight: 600; }
+    .btn-primary:hover, .btn-primary:focus {
+      background-color: #76dd53;
+      border: solid 2px #76dd53; }
     .btn-primary-outlined {
       color: #4ac623;
       border: solid 2px #4ac623;
       background-color: transparent;
       font-weight: 600; }
+      .btn-primary-outlined:hover, .btn-primary-outlined:focus {
+        color: #FFF;
+        background-color: #4ac623;
+        border: solid 2px #4ac623;
+        font-weight: 600; }
   .btn-secondary-outlined {
     color: #2678e5;
     border: solid 2px #2678e5; }
   .btn-outlined {
     font-weight: 700;
     color: #26292c;
-    border: solid 3px #26292c; }
+    border: solid 3px #26292c;
+    background-color: transparent; }
+    .btn-outlined:hover, .btn-outlined:focus {
+      background-color: #f4f4f4; }
   .btn-white {
     color: #4ac623;
     background-color: #FFF;
@@ -88,6 +100,10 @@ body {
       color: #FFF;
       border: 2.5px solid #FFF;
       background-color: transparent; }
+      .btn-white-outlined:hover, .btn-white-outlined:focus {
+        color: #4ac623;
+        background-color: #FFF;
+        border-color: #FFF; }
 
 .dropdown {
   height: 100%;
