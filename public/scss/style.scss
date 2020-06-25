@@ -1147,11 +1147,11 @@ body {
   & .btn {
     margin-left: 1rem;
     height: 4.8rem;
-    padding: 1.35rem 2rem;
+    padding: 1.35rem 3rem;
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.16px;
-    border-radius: 6px;
+    border-radius: 5px;
 
     @include respond(desktop-lg) {
       font-size: 1.55rem;
