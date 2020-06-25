@@ -154,7 +154,7 @@ window.addEventListener('scroll', function () {
         document.querySelector('[href="#section-04"]').classList.add('active');
       }
     }
-    if (window.scrollY >= hideToc.offsetTop - 150) {
+    if (window.scrollY >= hideToc.offsetTop - 80) {
       tableOfContent.classList.add('hide');
       console.log('HIDEN');
     } else {
