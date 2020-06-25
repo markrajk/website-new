@@ -154,11 +154,10 @@ window.addEventListener('scroll', function () {
         document.querySelector('[href="#section-04"]').classList.add('active');
       }
     }
-    if (window.scrollY >= hideToc.offsetTop - 80) {
-      tableOfContent.classList.add('hide');
-      console.log('HIDEN');
+    if (window.scrollY >= hideToc.offsetTop - 150) {
+      tableOfContent.classList.add('toc-hidden');
     } else {
-      tableOfContent.classList.remove('hide');
+      tableOfContent.classList.remove('toc-hidden');
     }
   } else {
     header.style.top = '0';

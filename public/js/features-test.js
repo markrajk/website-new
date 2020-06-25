@@ -223,19 +223,19 @@ window.addEventListener('scroll', function () {
         subheaderItem.offsetWidth / 2;
     }
 
-    if (window.scrollY >= getStartedCard.offsetTop - header.offsetHeight - 30) {
-      for (var i = 0; i < tocLinks.length; i++) {
-        tocLinks[i].classList.remove('active');
-      }
+    // if (window.scrollY >= getStartedCard.offsetTop - header.offsetHeight - 30) {
+    //   for (var i = 0; i < tocLinks.length; i++) {
+    //     tocLinks[i].classList.remove('active');
+    //   }
 
-      subheaderItem = document.querySelector('[href="#get-started"] p');
-      subheaderItem.classList.add('active');
+    //   subheaderItem = document.querySelector('[href="#get-started"] p');
+    //   subheaderItem.classList.add('active');
 
-      subheaderList.scrollLeft =
-        subheaderItem.offsetLeft -
-        subheaderList.offsetWidth / 2 +
-        subheaderItem.offsetWidth / 2;
-    }
+    //   subheaderList.scrollLeft =
+    //     subheaderItem.offsetLeft -
+    //     subheaderList.offsetWidth / 2 +
+    //     subheaderItem.offsetWidth / 2;
+    // }
     // if (window.scrollY >= hideToc.offsetTop - 150) {
     //   tableOfContent.classList.add('hide');
     //   console.log('HIDEN');
