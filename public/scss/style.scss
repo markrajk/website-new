@@ -1130,6 +1130,12 @@ body {
       // padding: 1.4rem 3rem;
       padding: 0 .6rem;
     }
+
+    &:hover,
+    &:focus {
+      border-radius: 6px;
+      background-color: rgba(74, 198, 35, 0.1);
+    }
     
     &.active {
       color: #4ac623;

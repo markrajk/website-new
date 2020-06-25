@@ -701,6 +701,9 @@ body {
         display: none; } }
     .main-overview .table-of-content-link:not(:last-of-type) {
       padding: 0 .6rem; }
+    .main-overview .table-of-content-link:hover, .main-overview .table-of-content-link:focus {
+      border-radius: 6px;
+      background-color: rgba(74, 198, 35, 0.1); }
     .main-overview .table-of-content-link.active {
       color: #4ac623;
       font-weight: 600;
