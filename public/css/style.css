@@ -715,7 +715,8 @@ body {
     padding: 1.35rem 2rem;
     font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 0.16px; }
+    letter-spacing: 0.16px;
+    border-radius: 6px; }
     @media (max-width: 1199px) {
       .main-overview .table-of-content .btn {
         font-size: 1.55rem; } }

@@ -1151,6 +1151,7 @@ body {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.16px;
+    border-radius: 6px;
 
     @include respond(desktop-lg) {
       font-size: 1.55rem;

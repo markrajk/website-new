@@ -148,7 +148,7 @@ window.addEventListener('scroll', function () {
       }
     }
 
-    if (window.scrollY >= section04Card.offsetTop - header.offsetHeight - 30) {
+    if (window.scrollY >= section04Card.offsetTop - header.offsetHeight - 100) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
         document.querySelector('[href="#section-04"]').classList.add('active');
