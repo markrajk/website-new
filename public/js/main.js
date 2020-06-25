@@ -126,8 +126,11 @@ window.addEventListener('scroll', function () {
   }
 
   if (window.scrollY >= tableOfContentPos.offsetTop - 60) {
+    var scrollSpeed = Math.abs(checkScrollSpeed());
     header.style.top = '-8.4rem';
-    header.style.transitionDuration = `${2 / Math.abs(checkScrollSpeed())}s`;
+    header.style.transitionDuration = `${2 / scrollSpeed}s`;
+    tableOfContent.style.transitionDuration = `${2 / scrollSpeed}s`;
+
     if (window.scrollY >= section01Card.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
@@ -154,9 +157,15 @@ window.addEventListener('scroll', function () {
         document.querySelector('[href="#section-04"]').classList.add('active');
       }
     }
-    if (window.scrollY >= hideToc.offsetTop - 150) {
+    if (window.scrollY >= hideToc.offsetTop - 120) {
+      tableOfContent.style.transitionDuration = `${
+        2 / Math.abs(checkScrollSpeed())
+      }s`;
       tableOfContent.classList.add('toc-hidden');
     } else {
+      tableOfContent.style.transitionDuration = `${
+        2 / Math.abs(checkScrollSpeed())
+      }s`;
       tableOfContent.classList.remove('toc-hidden');
     }
   } else {

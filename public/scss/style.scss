@@ -312,6 +312,7 @@ body {
 
         &:hover,
         &:focus {
+          color: #000;
           text-decoration: underline;
         }
       }
@@ -366,7 +367,6 @@ body {
 
 
   & .nav {
-    padding-bottom: .3rem;
     height: 8.4rem;
     display: flex;
     align-items: center;
@@ -386,15 +386,20 @@ body {
 
     &-brand {
       margin-right: 5%;
+
+      & .brand-img-wrapper {
+        display: inline-block;
+      }
+
       &-img {
         height: 4.49rem;
 
         @include respond(desktop-md) {
-          height: 3.15rem;
+          height: 4.29rem;
         }
 
         @include respond(desktop-xsm) {
-          height: 2.8rem;
+          height: 3.6rem;
         }
       }
     }
@@ -524,8 +529,16 @@ body {
         justify-content: space-between;
         border-bottom: 1.5px solid #f1f1f1;
 
+        & .brand-img-wrapper {
+          display: inline-block;
+        }
+
         img {
-          height: 2.95rem;
+          max-height: 4.29rem;
+
+          @include respond(desktop-xsm) {
+            height: 3.6rem;
+          }
         }
 
         & .nav-menu-toggle {
@@ -673,6 +686,7 @@ body {
 
           &:hover,
           &:focus {
+            color: #000;
             text-decoration: underline;
           }
 
@@ -792,6 +806,20 @@ body {
   }
 }
 
+#giving-feedback::before,
+#receiving-feedback::before,
+#developing-teams::before,
+#the-dashboard::before,
+#pdf-reports::before,
+#pdf-reports::before,
+#database::before,
+#get-started::before {
+  display: block; 
+  content: " "; 
+  margin-top: -8rem; 
+  height: 8rem; 
+  visibility: hidden;
+}
 
 //=====================================
 // HERO SECTION
@@ -1599,6 +1627,11 @@ body {
   padding-bottom: 8rem;
   background-color: #f7f7f7;
 
+  //TABLET
+  @include respond(desktop-md) {
+    display: none;
+  }
+
   &-main {
     text-align: center;
 
@@ -1653,6 +1686,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+    //TABLET
+    @include custom-respond(1022) {
+      display: none;
+    }
 
   &-card {
 
