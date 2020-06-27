@@ -1027,7 +1027,7 @@ body {
   //TABLET
   @include respond(desktop-md) {
     padding-top: 5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
 
   //MOBILE
@@ -1327,8 +1327,8 @@ body {
 .section-info {
   
   &-card {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1352,23 +1352,23 @@ body {
       border: 0!important;
       width: 100%;
       min-width: 0;
-      max-width: 33rem;
+      max-width: 34.2rem;
 
       //TABLET
       @include respond(desktop-md) {
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem;
         max-width: 28.6rem;
       }
 
       //MOBILE
       @include respond(desktop-xsm) {
-        margin-bottom: 2.68rem;
+        margin-bottom: 1.5rem;
         max-width: 68.8%;
       }
     }
 
     &-main {
-      margin-left: 8rem;
+      margin-left: 7rem;
       max-width: 54.6rem;
 
       //TABLET
@@ -1472,7 +1472,7 @@ body {
 
       .section-info-card-main {
         margin-left: 0;
-        margin-right: 8rem;
+        margin-right: 7rem;
 
 
         //MOBILE
@@ -1487,29 +1487,22 @@ body {
       }
     }
 
-    &.card-01 {
-      padding-top: 3.5rem;
-      padding-bottom: 3.5rem;
+    // &.card-01 {
+    //   padding-top: 3.5rem;
+    //   padding-bottom: 3.5rem;
 
-      & .section-info-card-video {
-        max-width: 34.2rem;
-      }
+    //   & .section-info-card-video {
+    //     max-width: 34.2rem;
+    //   }
 
-      & .section-info-card-main {
-        margin-left: 7rem;
-      }
-    }
+    //   & .section-info-card-main {
+    //     margin-left: 7rem;
+    //   }
+    // }
 
     &.card-02 {
-      padding-top: 3.5rem;
-      padding-bottom: 3.5rem;
-
-      & .section-info-card-video {
-        max-width: 34.2rem;
-      }
-
-      & .section-info-card-main {
-        margin-right: 7rem;
+      @include respond(desktop-md) {
+        padding-top: 4.5rem;
       }
     }
   }
@@ -1536,7 +1529,7 @@ body {
   //MOBILE
   @include respond(desktop-xsm) {
     padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 
   &-img {
@@ -1546,7 +1539,7 @@ body {
 
     //TABLET
     @include respond(desktop-md) {
-      margin-bottom: 3.5rem;
+      margin-bottom: 3.2rem;
       margin-top: 0rem;
       order: -1;
       max-width: 61.2rem;
@@ -1554,7 +1547,7 @@ body {
 
     //MOBILE
     @include respond(desktop-xsm) {
-      margin-bottom: 4rem;
+      margin-bottom: 2.38rem;
       margin-top: 0;
       max-width: 99%;
     }
@@ -2087,6 +2080,12 @@ body {
       padding-top: 7rem;
     }
 
+    //MOBILE
+    @include respond(desktop-xsm) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
     & .section-heading-text {
       margin-left: auto;
       margin-right: auto;
@@ -2102,11 +2101,6 @@ body {
         max-width: 27rem;
       }
     }
-
-    //TABLET
-    @include respond(desktop-md) {
-      padding-top: 7rem;
-    }
   }
 }
 
@@ -2114,7 +2108,7 @@ body {
 // FEATURES CARD SECTION
 //=====================================
 .section-feature-card {
-  padding-top: 8.5rem;
+  padding-top: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2129,29 +2123,30 @@ body {
 
   //MOBILE
   @include respond(desktop-xsm) {
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-bottom: 3rem;
   }
 
   &-video {
     min-width: 0;
     width: 100%;
-    max-width: 32.37rem;
+    max-width: 35.6rem;
 
     //TABLET
     @include respond(desktop-md) {
-      margin-bottom: 3.5rem;
-      max-width: 28.66rem;
+      margin-bottom: 2.5rem;
+      max-width: 31.6rem;
     }
 
     //MOBILE
     @include respond(desktop-xsm) {
-      margin-bottom: 3rem;
+      max-width: 26.2rem;
+      margin-bottom: 2rem;
     }
   }
 
   &-main {
-    margin-left: 9rem;
+    margin-left: 7rem;
 
     //TABLET
     @include respond(desktop-md) {
@@ -2235,7 +2230,7 @@ body {
 
     & .section-feature-card-main {
       margin-left: 0;
-      margin-right: 9rem;
+      margin-right: 7rem;
 
       //TABLET
       @include respond(desktop-md) {
@@ -2244,9 +2239,18 @@ body {
     }
   }
 
+  &.card-01 {
+    padding-top: 7rem;
+
+    //MOBILE
+    @include respond(desktop-xsm) {
+      padding-top: 2rem;
+    }
+  }
+
   &.card-03,
   &.card-05 {
-    padding-bottom: 9rem;
+    padding-bottom: 7.5rem;
 
     //TABLET
     @include respond(desktop-md) {
@@ -2259,8 +2263,8 @@ body {
 // FEATURE DEVELOPING TEAMS SECTION
 //=====================================
 .section-feature-teams {
-  padding-top: 8.5rem;
-  padding-bottom: 8.5rem;
+  padding-top: 10rem;
+  padding-bottom: 9.5rem;
   text-align: center;
 
   //TABLET
@@ -2373,13 +2377,13 @@ body {
 // FEATURES DASHBOARD SECTION
 //=====================================
 .main-features .section-dashboard {
-  padding-top: 8.5rem;
-  padding-bottom: 8.5rem;
+  padding-top: 10rem;
+  padding-bottom: 9rem;
   text-align: center;
 
   //TABLET 
   @include respond(desktop-md) {
-    padding-top: 8rem;
+    padding-top: 7rem;
     padding-bottom: 6rem;
   }
 
@@ -2425,11 +2429,11 @@ body {
       &-img {
         width: 100%;
         min-width: 0;
-        max-width: 97rem;
+        max-width: 86rem;
 
         //TABLET 
         @include respond(desktop-md) {
-          max-width: 66.4rem;
+          max-width: 66rem;
         }
       }
 
@@ -2521,7 +2525,7 @@ body {
 //=====================================
 .section-pdf,
 .section-database {
-  padding-top: 8.5rem;
+  padding-top: 9rem;
   text-align: center;
 
   //TABLET
@@ -2554,13 +2558,14 @@ body {
   }
 
   &-card {
-    margin-bottom: 7rem;
+    margin-bottom: 9rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
     //TABLET
     @include respond(desktop-md) {
+      margin-bottom: 5rem;
       flex-direction: column;
     }
 
