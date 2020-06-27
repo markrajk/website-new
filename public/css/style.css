@@ -952,6 +952,13 @@ body {
       max-width: 34.2rem; }
     .section-info-card.card-01 .section-info-card-main {
       margin-left: 7rem; }
+  .section-info-card.card-02 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+    .section-info-card.card-02 .section-info-card-video {
+      max-width: 34.2rem; }
+    .section-info-card.card-02 .section-info-card-main {
+      margin-right: 7rem; }
 
 .main-overview .section-dashboard {
   display: flex;
