@@ -1488,7 +1488,16 @@ body {
     }
 
     &.card-01 {
-      padding-top: 8rem;
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+
+      & .section-info-card-video {
+        max-width: 34.2rem;
+      }
+
+      & .section-info-card-main {
+        margin-left: 7rem;
+      }
     }
   }
 }
