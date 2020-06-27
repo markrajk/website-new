@@ -1416,6 +1416,9 @@ body {
           margin-right: 0; } }
   .section-feature-card.card-01 {
     padding-top: 7rem; }
+    @media (max-width: 991px) {
+      .section-feature-card.card-01 {
+        padding-top: 3.5rem; } }
     @media (max-width: 575px) {
       .section-feature-card.card-01 {
         padding-top: 2rem; } }

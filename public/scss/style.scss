@@ -2242,6 +2242,11 @@ body {
   &.card-01 {
     padding-top: 7rem;
 
+    //TABLET
+    @include respond(desktop-md) {
+      padding-top: 3.5rem;
+    }
+
     //MOBILE
     @include respond(desktop-xsm) {
       padding-top: 2rem;
