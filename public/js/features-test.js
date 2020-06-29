@@ -110,7 +110,7 @@ var pdfReportsCard = document.getElementById('pdf-reports');
 var databaseCard = document.getElementById('database');
 var getStartedCard = document.getElementById('get-started');
 
-var tocLinks = document.querySelectorAll('.table-of-content-item-link');
+var tocLinks = document.querySelectorAll('.table-of-content-item');
 
 var subheaderList = document.querySelector('.table-of-content-wrapper');
 var subheaderItem;
@@ -137,7 +137,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#giving-feedback"] p');
+      subheaderItem = document.querySelector('[href="#giving-feedback"]');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -153,7 +153,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#receiving-feedback"] p');
+      subheaderItem = document.querySelector('[href="#receiving-feedback"]');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -170,7 +170,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#developing-teams"] p');
+      subheaderItem = document.querySelector('[href="#developing-teams"]');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -187,20 +187,22 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#the-dashboard"] p');
+      subheaderItem = document.querySelector('[href="#the-dashboard"]');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
         subheaderItem.offsetLeft -
         subheaderList.offsetWidth / 2 +
         subheaderItem.offsetWidth / 2;
+
+      intervalManager(true, sliderInterval, 5000);
     }
     if (window.scrollY >= pdfReportsCard.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#pdf-reports"] p');
+      subheaderItem = document.querySelector('[href="#pdf-reports"]');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -214,7 +216,7 @@ window.addEventListener('scroll', function () {
         tocLinks[i].classList.remove('active');
       }
 
-      subheaderItem = document.querySelector('[href="#database"] p');
+      subheaderItem = document.querySelector('[href="#database"]');
       subheaderItem.classList.add('active');
 
       subheaderList.scrollLeft =
@@ -228,7 +230,7 @@ window.addEventListener('scroll', function () {
     //     tocLinks[i].classList.remove('active');
     //   }
 
-    //   subheaderItem = document.querySelector('[href="#get-started"] p');
+    //   subheaderItem = document.querySelector('[href="#get-started"]');
     //   subheaderItem.classList.add('active');
 
     //   subheaderList.scrollLeft =
@@ -305,8 +307,17 @@ var slideBtns = document.querySelectorAll(
 var intervalID = null;
 
 function intervalManager(flag, animate, time) {
-  if (flag) intervalID = setInterval(animate, time);
-  else clearInterval(intervalID);
+  if (flag) {
+    if (!intervalID) {
+      animate();
+      intervalID = setInterval(animate, time);
+    }
+  } else {
+    clearInterval(intervalID);
+  }
+
+  // if (flag) intervalID = setInterval(animate, time);
+  // else clearInterval(intervalID);
 }
 
 function sliderInterval() {
@@ -323,14 +334,18 @@ function sliderInterval() {
 
   if (index >= slides.length - 1) {
     slides[0].classList.add('active');
+    slides[0].pause();
+    slides[0].currentTime = 0;
+    slides[0].play();
     slideBtns[0].classList.add('active');
   } else {
     slides[index + 1].classList.add('active');
+    slides[index + 1].pause();
+    slides[index + 1].currentTime = 0;
+    slides[index + 1].play();
     slideBtns[index + 1].classList.add('active');
   }
 }
-
-intervalManager(true, sliderInterval, 5000);
 
 for (var i = 0; i < slideBtns.length; i++) {
   slideBtns[i].addEventListener('click', function (e) {
@@ -348,9 +363,14 @@ for (var i = 0; i < slideBtns.length; i++) {
 
     e.target.classList.add('active');
 
-    document
-      .querySelector('.' + e.target.getAttribute('slide-target'))
-      .classList.add('active');
+    var video = document.querySelector(
+      '.' + e.target.getAttribute('slide-target')
+    );
+
+    video.classList.add('active');
+    video.pause();
+    video.currentTime = 0;
+    video.play();
 
     intervalManager(true, sliderInterval, 5000);
   });
