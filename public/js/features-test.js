@@ -309,7 +309,6 @@ var intervalID = null;
 function intervalManager(flag, animate, time) {
   if (flag) {
     if (!intervalID) {
-      animate();
       intervalID = setInterval(animate, time);
     }
   } else {
