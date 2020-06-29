@@ -408,20 +408,37 @@
       </p>
       <div class="section-dashboard-main">
         <div class="section-dashboard-main-body">
-          <img src="./public/img/f-08.png" alt="Team feedback dashboard screenshot" class="section-dashboard-main-body-img">
+          <!-- <img src="./public/img/f-08.png" alt="Team feedback dashboard screenshot" class="section-dashboard-main-body-img"> -->
+          <div class="section-dashboard-main-body-slider">
+            <video class="section-dashboard-main-body-slider-slide slide-01 active" autoplay muted loop>
+              <source src="./public/video/slide/slide-01.m4v" type="video/mp4">
+            </video>
+
+            <video class="section-dashboard-main-body-slider-slide slide-02" autoplay muted loop>
+              <source src="./public/video/slide/slide-02.m4v" type="video/mp4">
+            </video>
+
+            <video class="section-dashboard-main-body-slider-slide slide-03" autoplay muted loop>
+              <source src="./public/video/slide/slide-03.m4v" type="video/mp4">
+            </video>
+
+            <video class="section-dashboard-main-body-slider-slide slide-04" autoplay muted loop>
+              <source src="./public/video/slide/slide-04.m4v" type="video/mp4">
+            </video>
+          </div>
         </div>
         <ul class="section-dashboard-main-body-list">
           <li class="section-dashboard-main-body-list-item">
-            <a href="#" class="section-dashboard-main-body-list-item-link active">Follow employees</a>
+            <button class="section-dashboard-main-body-list-item-link active" slide-target="slide-01">Follow employees</button>
           </li>
           <li class="section-dashboard-main-body-list-item">
-            <a href="#" class="section-dashboard-main-body-list-item-link">Follow teams</a>
+            <button class="section-dashboard-main-body-list-item-link" slide-target="slide-02">Follow teams</button>
           </li>
           <li class="section-dashboard-main-body-list-item">
-            <a href="#" class="section-dashboard-main-body-list-item-link">Compare teams</a>
+            <button class="section-dashboard-main-body-list-item-link" slide-target="slide-03">Compare teams</button>
           </li>
           <li class="section-dashboard-main-body-list-item">
-            <a href="#" class="section-dashboard-main-body-list-item-link">Manage easily</a>
+            <button class="section-dashboard-main-body-list-item-link" slide-target="slide-04">Manage easily</button>
           </li>
         </ul>
       </div>
