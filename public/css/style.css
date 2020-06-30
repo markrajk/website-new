@@ -1604,7 +1604,7 @@ body {
           max-width: 66rem; } }
     .main-features .section-dashboard-main-body-slider-slide {
       position: absolute;
-      opacity: .05;
+      opacity: .2;
       visibility: hidden;
       transform: translate(50%, 0); }
       .main-features .section-dashboard-main-body-slider-slide.active {
