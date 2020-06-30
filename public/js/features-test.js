@@ -370,7 +370,7 @@ for (var i = 0; i < slideBtns.length; i++) {
     video.pause();
     video.currentTime = 0;
     video.play();
-
+    intervalID = null;
     intervalManager(true, sliderInterval, 5000);
   });
 }

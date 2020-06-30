@@ -434,7 +434,7 @@ body {
     }
 
     &-brand {
-      margin-right: 5%;
+      margin-right: 5.2%;
 
       & .brand-img-wrapper {
         display: inline-block;
@@ -485,7 +485,7 @@ body {
               width: 120%;
               height: 3px;
               background-color: $green-primary;
-              bottom: 0;
+              bottom: .5rem;
               left: 50%;
               transform: translate(-50%, 0);
               
@@ -730,12 +730,12 @@ body {
           font-weight: 400;
           line-height: 1.73;
           letter-spacing: 0.15px;
-          color: #8b8b8b;
+          color: #6f6f6f;
           text-decoration: none;
 
           &:hover,
           &:focus {
-            color: #000;
+            color: #222;
             text-decoration: underline;
           }
 
@@ -1070,7 +1070,7 @@ body {
 //=====================================
 .section-video {
   padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6.4rem;
   text-align: center;
 
   //TABLET
@@ -1285,6 +1285,11 @@ body {
   scroll-behavior: smooth;
   z-index: 100;
 
+  &::-webkit-scrollbar { 
+    height: 0;
+    width: 0 !important;
+}
+
   &.move {
     width: 100%;
     position: fixed;
@@ -1300,7 +1305,7 @@ body {
     }
 
     &:hover .table-of-content-item-icon {
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.3rem;
       opacity: 1;
     }
 
@@ -1310,6 +1315,7 @@ body {
   }
 }
 .main-features .table-of-content {
+  max-width: 123rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1327,6 +1333,13 @@ body {
     flex-direction: column;
     text-align: center;
     text-decoration: none;
+    width: 100%;
+    max-width: 15rem;
+
+    //TABLET
+    @include respond(desktop-md) {
+      max-width: 16rem;
+     }
 
     &.active {
       
@@ -1346,12 +1359,12 @@ body {
 
     &:hover .table-of-content-item-icon,
     &:focus .table-of-content-item-icon {
-      transform: translate(0, -15px);
+      transform: translate(0, -9px);
     }
 
     &-icon {
       margin-top: 2.2rem;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.3rem;
       // width: 6.8rem;
       // height: 6.8rem;
       font-size: 5.4rem;
@@ -1360,18 +1373,24 @@ body {
       transform: translate(0,0);
       transition: all .3s ease-in-out;
       color: #909190;
+
+      //TABLET
+      @include respond(desktop-md) {
+       //font-size: 4rem;
+       margin-bottom: .7rem;
+      }
     }
 
     &-link {
       margin-bottom: 1.8rem;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 400;
       color: #000000;
       text-decoration: none;
       white-space: nowrap;
 
       @include respond(desktop-md) {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
       }
 
       @include respond(desktop-xsm) {
@@ -1998,7 +2017,7 @@ body {
 
   //TABLET
   @include respond(desktop-md) {
-    display: none;
+    //display: none;
     padding-top: 9.5rem;
     padding-bottom: 8.1rem;
   }
@@ -2508,7 +2527,7 @@ body {
 
         &-slide {
           position: absolute;
-          opacity: 0;
+          opacity: .05;
           visibility: hidden;
           transform: translate(50%,0);
 
@@ -2518,8 +2537,8 @@ body {
             opacity: 1;
             display: block!important;
             transform: translate(0,0);
-            transition: all .3s ease-in-out;
-            transition: opacity .5s ease-in-out;
+            //transition: all .3s ease-in-out;
+            transition: opacity .8s linear;
           }
         }
       }
@@ -3485,7 +3504,7 @@ body {
 }
 
 .activate-toc {
-  margin-bottom: 1.8rem;
+  margin-bottom: 3rem;
 
   @include respond(desktop-md) {
     margin-bottom: 0;
