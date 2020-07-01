@@ -335,10 +335,11 @@ function playVideos() {
       break;
     }
   }
-  var currentVideo = slides[index];
-  if (!currentVideo.readyState > 3) {
-    playVideos();
-  }
+
+  // if (!currentVideo.readyState > 3) {
+  //   console.log('ALERT!!!!!!!!!!!');
+  //   playVideos();
+  // }
 
   slideBtns[0].classList.remove('active');
   slideBtns[1].classList.remove('active');
@@ -352,7 +353,7 @@ function playVideos() {
 
   slideBtns[index].classList.add('active');
   slides[index].classList.add('active');
-
+  var currentVideo = slides[index];
   var currentVideoDuration = currentVideo.duration;
 
   var currentBtn = slideBtns[index];
