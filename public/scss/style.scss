@@ -957,7 +957,7 @@ body {
 
     &-text {
       margin-bottom: 3rem;
-      max-width: 49rem;
+      max-width: 45rem;
       font-size: 1.8rem;
       font-weight: 400;
       line-height: 1.56;
@@ -1487,6 +1487,7 @@ body {
       }
 
       &-text {
+
         margin-bottom: 3.5rem;
         font-size: 1.8rem;
         font-weight: 400;
@@ -1579,9 +1580,26 @@ body {
     //   }
     // }
 
+    &.card-01 {
+      & .section-info-card-main-text {
+        max-width: 45.2rem;
+
+        @include respond(desktop-md) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      
+    }
+
     &.card-02 {
       @include respond(desktop-md) {
         padding-top: 4.5rem;
+      }
+
+      & .section-info-card-main-text {
+        max-width: 51.2rem;
       }
     }
   }
@@ -1614,7 +1632,7 @@ body {
   &-img {
     width: 100%;
     min-width: 0;
-    max-width: 102.4rem;
+    max-width: 94rem;
 
     //TABLET
     @include respond(desktop-md) {
@@ -2373,7 +2391,7 @@ body {
     margin-bottom: 7rem;
     width: 100%;
     min-width: 0;
-    max-width: 108rem;
+    max-width: 94rem;
 
     //TABLET
     @include respond(desktop-md) {
@@ -2498,14 +2516,15 @@ body {
 
   &-main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 128.7rem;
 
     //TABLET 
     @include respond(desktop-md) {
-      flex-direction: column;
-      align-items: center;
+      // flex-direction: column;
+      // align-items: center;
     }
 
     &-body {
@@ -2515,7 +2534,7 @@ body {
         width: 100%;
         min-width: 0;
         max-width: 86rem;
-        clip-path: inset(1px 1px);
+        clip-path: inset(2px 2px);
 
         //TABLET 
         @include respond(desktop-md) {
@@ -2526,6 +2545,7 @@ body {
       &-slider {
 
         &-slide {
+          left: 0;
           position: absolute;
           opacity: .2;
           visibility: hidden;
@@ -2537,89 +2557,49 @@ body {
             opacity: 1;
             display: block!important;
             transform: translate(0,0);
-            //transition: all .3s ease-in-out;
-            transition: opacity .8s linear;
           }
         }
       }
 
       &-list {
-        margin-left: 4.7%;
+        margin-top: 4.5rem;
         list-style: none;
         width: 100%;
-        max-width: 20rem;
-
-        //TABLET 
-        @include respond(desktop-md) {
-          margin-top: 3rem;
-          margin-left: 0;
-          max-width: 66.4rem;
-          display: flex;
-          justify-content: space-between;
-        }
-
-         //MOBILE
-         @include respond(desktop-xsm) {
-          flex-wrap: wrap;
-        }
-
+        max-width: 65rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         &-item {
-          width: 100%;
 
-          &:not(:last-of-type) {
-            margin-bottom: 1.2rem;
-
-            //TABLET 
-            @include respond(desktop-md) {
-              margin-bottom: 0;
-              margin-right: 1.2rem;
-            }
-          }
-
-          //MOBILE
-          @include respond(desktop-xsm) {
-            margin-right: 0!important;
-            margin-bottom: 1.2rem!important;
-            width: 50%;
-          }
 
           &-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.4rem 0;
-            width: 100%;
-            max-width: 100%;
+            position: relative;
             font-size: 1.6rem;
-            font-weight: 600;
-            letter-spacing: 0.27px;
-            color: $green-primary;
-            text-decoration: none;
-            border-radius: 8px;
-            border: solid 2.3px #46bf20;
-            white-space: nowrap;
+            font-weight: 500;
+            letter-spacing: 0.08px;
+            color: #4b4b4b;
+            background-color: transparent;
+            border: 0;
             outline: none;
             cursor: pointer;
-            background-color: #FFF;
 
-            @include respond(desktop-md) {
-              max-width: 15.6rem;
-              padding: 1.2rem 0;
-              font-size: 1.5rem;
-              font-weight: 500;
-              letter-spacing: 0.23px;
-            }
+            &.active {
+              & .video-progress {
+                position: absolute;
+                bottom: -1.6rem;
+                left: -10%;
+                display: block;
+                height: 3px;
+                background-color: $green-primary;
+                //transform: translate(-50%, 0);
+                animation: none;
 
-            //MOBILE
-            @include respond(desktop-xsm) {
-              max-width: 90%;
-            }
-
-            &.active,
-            &:hover {
-              background-color: $green-primary;
-              color: #fff;
+                &.animate {
+                  animation-timing-function: linear;
+                  animation-name: left-to-right;
+                }
+              }
             }
           }
         }
@@ -2695,13 +2675,14 @@ body {
 
       //TABLET
       @include respond(desktop-xsm) {
-        margin-bottom: 3rem;
+        //margin-bottom: 3rem;
+        margin-bottom: 0;
         max-width: 80%;
       }
     }
 
     &-main {
-      margin-left: 7rem;
+      margin-left: 9.5rem;
       text-align: left;
       max-width: 48.6rem;
 
@@ -3817,5 +3798,14 @@ body {
 .hide-xxl {
   @include respond(desktop-xxl) {
     display: none!important;
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 120%;
   }
 }

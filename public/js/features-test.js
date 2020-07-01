@@ -195,7 +195,8 @@ window.addEventListener('scroll', function () {
         subheaderList.offsetWidth / 2 +
         subheaderItem.offsetWidth / 2;
 
-      intervalManager(true, sliderInterval, 5000);
+      //intervalManager(true, sliderInterval, 5000);
+      // playVideos();
     }
     if (window.scrollY >= pdfReportsCard.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
@@ -296,6 +297,10 @@ function docReady(fn) {
   }
 }
 
+window.addEventListener('load', function () {
+  playVideos();
+});
+
 var slider = document.querySelector('.section-dashboard-main-body-slider');
 var slides = document.querySelectorAll(
   '.section-dashboard-main-body-slider-slide'
@@ -304,22 +309,7 @@ var slideBtns = document.querySelectorAll(
   '.section-dashboard-main-body-list-item-link'
 );
 
-var intervalID = null;
-
-function intervalManager(flag, animate, time) {
-  if (flag) {
-    if (!intervalID) {
-      intervalID = setInterval(animate, time);
-    }
-  } else {
-    clearInterval(intervalID);
-  }
-
-  // if (flag) intervalID = setInterval(animate, time);
-  // else clearInterval(intervalID);
-}
-
-function sliderInterval() {
+function playVideos() {
   var index;
   for (var i = 0; i < slides.length; i++) {
     if (slides[i].classList.contains('active')) {
@@ -328,49 +318,144 @@ function sliderInterval() {
     }
   }
 
-  slides[index].classList.remove('active');
-  slideBtns[index].classList.remove('active');
+  slideBtns[0].classList.remove('active');
+  slideBtns[1].classList.remove('active');
+  slideBtns[2].classList.remove('active');
+  slideBtns[3].classList.remove('active');
 
-  if (index >= slides.length - 1) {
-    slides[0].classList.add('active');
-    slides[0].pause();
-    slides[0].currentTime = 0;
-    slides[0].play();
-    slideBtns[0].classList.add('active');
-  } else {
-    slides[index + 1].classList.add('active');
-    slides[index + 1].pause();
-    slides[index + 1].currentTime = 0;
-    slides[index + 1].play();
-    slideBtns[index + 1].classList.add('active');
-  }
+  slides[0].classList.remove('active');
+  slides[1].classList.remove('active');
+  slides[2].classList.remove('active');
+  slides[3].classList.remove('active');
+
+  slideBtns[index].classList.add('active');
+  slides[index].classList.add('active');
+
+  var currentVideo = slides[index];
+  var currentVideoDuration = currentVideo.duration;
+
+  var currentBtn = slideBtns[index];
+  var currentBtnProgress = currentBtn.querySelector('.video-progress');
+
+  // currentVideo.pause();
+  currentVideo.currentTime = 0;
+  currentVideo.play();
+  currentBtnProgress.style.animationDuration = `${currentVideoDuration}s`;
+  currentBtnProgress.classList.add('animate');
+
+  var nextVideo = slides[index + 1];
+  var nextBtn = slideBtns[index + 1];
+
+  var firstVideo = slides[0];
+  var firstBtn = slideBtns[0];
+
+  currentVideo.onended = function () {
+    currentVideo.classList.remove('active');
+    currentBtn.classList.remove('active');
+    currentBtnProgress.classList.remove('animate');
+
+    if (index < slides.length - 1) {
+      nextVideo.classList.add('active');
+      nextBtn.classList.add('active');
+    } else {
+      firstVideo.classList.add('active');
+      firstBtn.classList.add('active');
+    }
+
+    playVideos();
+  };
 }
 
 for (var i = 0; i < slideBtns.length; i++) {
   slideBtns[i].addEventListener('click', function (e) {
-    // console.log(slides[i]);
-    intervalManager(false);
-    slides[0].classList.remove('active');
-    slides[1].classList.remove('active');
-    slides[2].classList.remove('active');
-    slides[3].classList.remove('active');
-
     slideBtns[0].classList.remove('active');
     slideBtns[1].classList.remove('active');
     slideBtns[2].classList.remove('active');
     slideBtns[3].classList.remove('active');
 
-    e.target.classList.add('active');
+    slides[0].classList.remove('active');
+    slides[1].classList.remove('active');
+    slides[2].classList.remove('active');
+    slides[3].classList.remove('active');
+    videoBtnClicked = true;
 
+    e.target.classList.add('active');
     var video = document.querySelector(
       '.' + e.target.getAttribute('slide-target')
     );
 
     video.classList.add('active');
-    video.pause();
-    video.currentTime = 0;
-    video.play();
-    intervalID = null;
-    intervalManager(true, sliderInterval, 5000);
+    playVideos();
   });
 }
+
+// var intervalID = null;
+
+// function intervalManager(flag, animate, time) {
+//   if (flag) {
+//     if (!intervalID) {
+//       intervalID = setInterval(animate, time);
+//     }
+//   } else {
+//     clearInterval(intervalID);
+//   }
+
+// if (flag) intervalID = setInterval(animate, time);
+// else clearInterval(intervalID);
+//}
+
+// function sliderInterval() {
+//   var index;
+//   for (var i = 0; i < slides.length; i++) {
+//     if (slides[i].classList.contains('active')) {
+//       index = i;
+//       break;
+//     }
+//   }
+
+//   slides[index].classList.remove('active');
+//   slideBtns[index].classList.remove('active');
+
+//   if (index >= slides.length - 1) {
+//     slides[0].classList.add('active');
+//     slides[0].pause();
+//     slides[0].currentTime = 0;
+//     slides[0].play();
+//     slideBtns[0].classList.add('active');
+//   } else {
+//     slides[index + 1].classList.add('active');
+//     slides[index + 1].pause();
+//     slides[index + 1].currentTime = 0;
+//     slides[index + 1].play();
+//     slideBtns[index + 1].classList.add('active');
+//   }
+// }
+
+// for (var i = 0; i < slideBtns.length; i++) {
+//   slideBtns[i].addEventListener('click', function (e) {
+//     // console.log(slides[i]);
+//     intervalManager(false);
+//     slides[0].classList.remove('active');
+//     slides[1].classList.remove('active');
+//     slides[2].classList.remove('active');
+//     slides[3].classList.remove('active');
+
+//     slideBtns[0].classList.remove('active');
+//     slideBtns[1].classList.remove('active');
+//     slideBtns[2].classList.remove('active');
+//     slideBtns[3].classList.remove('active');
+
+//     e.target.classList.add('active');
+
+// var video = document.querySelector(
+//   '.' + e.target.getAttribute('slide-target')
+// );
+
+// video.classList.add('active');
+//     video.pause();
+//     video.currentTime = 0;
+//     video.play();
+//     intervalID = null;
+//     intervalManager(true, sliderInterval, 5000);
+//   });
+// }
