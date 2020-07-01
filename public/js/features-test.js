@@ -201,11 +201,7 @@ window.addEventListener('scroll', function () {
       // if (playVideoBool && document.readyState === 'complete') playVideos();
       // playVideoBool = false;
     }
-    if (
-      window.scrollY >= theDashboardCard.offsetTop + 150 &&
-      playVideoBool &&
-      document.readyState === 'complete'
-    ) {
+    if (window.scrollY >= theDashboardCard.offsetTop + 150 && playVideoBool) {
       playVideos();
       playVideoBool = false;
     }
