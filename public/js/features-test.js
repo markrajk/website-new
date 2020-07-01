@@ -116,6 +116,7 @@ var subheaderList = document.querySelector('.table-of-content-wrapper');
 var subheaderItem;
 
 var dropdownMenu = document.querySelector('.dropdown-list');
+var playVideoBool = true;
 
 window.addEventListener('scroll', function () {
   if (window.scrollY > header.offsetHeight) {
@@ -196,7 +197,17 @@ window.addEventListener('scroll', function () {
         subheaderItem.offsetWidth / 2;
 
       //intervalManager(true, sliderInterval, 5000);
-      // playVideos();
+
+      // if (playVideoBool && document.readyState === 'complete') playVideos();
+      // playVideoBool = false;
+    }
+    if (
+      window.scrollY >= theDashboardCard.offsetTop + 150 &&
+      playVideoBool &&
+      document.readyState === 'complete'
+    ) {
+      playVideos();
+      playVideoBool = false;
     }
     if (window.scrollY >= pdfReportsCard.offsetTop - header.offsetHeight - 30) {
       for (var i = 0; i < tocLinks.length; i++) {
@@ -297,9 +308,11 @@ function docReady(fn) {
   }
 }
 
-window.addEventListener('load', function () {
-  playVideos();
-});
+// window.addEventListener('load', function () {
+//   if (window.scrollY >= theDashboardCard.offsetTop - 300) {
+//     playVideos();
+//   }
+// });
 
 var slider = document.querySelector('.section-dashboard-main-body-slider');
 var slides = document.querySelectorAll(
@@ -309,6 +322,15 @@ var slideBtns = document.querySelectorAll(
   '.section-dashboard-main-body-list-item-link'
 );
 
+// document.querySelector('.slide-01').addEdventListener('loadeddata', (e) => {
+//   //Video should now be loaded but we can add a second check
+
+//   if (videoElement.readyState >= 3) {
+//     //your code goes here
+//     playVideos();
+//   }
+// });
+
 function playVideos() {
   var index;
   for (var i = 0; i < slides.length; i++) {
@@ -316,6 +338,10 @@ function playVideos() {
       index = i;
       break;
     }
+  }
+  var currentVideo = slides[index];
+  if (!currentVideo.readyState > 3) {
+    playVideos();
   }
 
   slideBtns[0].classList.remove('active');
@@ -331,7 +357,6 @@ function playVideos() {
   slideBtns[index].classList.add('active');
   slides[index].classList.add('active');
 
-  var currentVideo = slides[index];
   var currentVideoDuration = currentVideo.duration;
 
   var currentBtn = slideBtns[index];
@@ -377,7 +402,6 @@ for (var i = 0; i < slideBtns.length; i++) {
     slides[1].classList.remove('active');
     slides[2].classList.remove('active');
     slides[3].classList.remove('active');
-    videoBtnClicked = true;
 
     e.target.classList.add('active');
     var video = document.querySelector(
